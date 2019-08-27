@@ -33,11 +33,11 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-# NOTE: The generic `R` represents the type of *range*.
-class Assert::Assertions::InRange(P, R) < Assert::Assertions::Assertion
+# NOTE: The generic `RangeType` represents the type of *range*.
+class Assert::Assertions::InRange(PropertyType, RangeType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P,
-    "@range": R,
+    "@actual": PropertyType,
+    "@range": RangeType,
     "@not_in_range_message": "String? = nil",
     "@min_message": "String? = nil",
     "@max_message": "String? = nil"

@@ -26,7 +26,7 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::Ip(P) < Assert::Assertions::Assertion
+class Assert::Assertions::Ip(PropertyType) < Assert::Assertions::Assertion
   initializer(
     "@actual": String?,
     "@version": "IPVersion = IPVersion::IPV4",

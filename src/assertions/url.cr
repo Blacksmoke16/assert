@@ -30,7 +30,7 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::Url(P) < Assert::Assertions::Assertion
+class Assert::Assertions::Url(PropertyType) < Assert::Assertions::Assertion
   initializer(
     "@actual": String?,
     "@protocols": "Array(String) = %w(http https)",

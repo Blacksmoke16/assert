@@ -32,11 +32,11 @@ require "../assertion"
 # Example.new.valid? # => true
 # ```
 #
-# NOTE: The generic `C` represents the type of *choices*.
-class Assert::Assertions::Choice(P, C) < Assert::Assertions::Assertion
+# NOTE: The generic `ChoicesType` represents the type of *choices*.
+class Assert::Assertions::Choice(PropertyType, ChoicesType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P,
-    "@choices": C,
+    "@actual": PropertyType,
+    "@choices": ChoicesType,
     "@min_matches": "Int32? = nil",
     "@max_matches": "Int32? = nil",
     "@min_message": "String? = nil",

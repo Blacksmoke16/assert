@@ -7,7 +7,7 @@ module Assert::Assertions
   #
   # ```
   # @[Assert::Assertions::Register(annotation: Assert::MyAssertion)]
-  # class MyAssertion(P) < Assert::Assertions::Assertion
+  # class MyAssertion(PropertyType) < Assert::Assertions::Assertion
   # end
   # ```
   annotation Register; end
@@ -39,7 +39,7 @@ module Assert::Assertions
   #
   # ```
   # @[Assert::Assertions::Register(annotation: Assert::MyCustom)]
-  # class MyCustom(P) < Assert::Assertions::Assertion
+  # class MyCustom(PropertyType) < Assert::Assertions::Assertion
   #   def initialize(
   #     @actual : String?,            # This assertion can only be used on `String?` or `String` properties. Is set automatically.
   #     @some_value : Int32,          # A required argument, must be supplied within the annotation or a compile time error will be raised.
@@ -72,7 +72,7 @@ module Assert::Assertions
   # end
   # ```
   #
-  # NOTE: Every assertion must have a generic `P` as its first generic type variable; even if the assertion is not using it.
+  # NOTE: Every assertion must have a generic `PropertyType` as its first generic type variable; even if the assertion is not using it.
   #
   # This custom assertion is now ready to use.  Be sure to `include Assert`.
   # ```
@@ -108,7 +108,7 @@ module Assert::Assertions
   #
   # ### Generics
   #
-  # An assertion can utilize additional generic type variables, other than the required `P`.  These would then be provided as positional arguments on the assertion annotation.
+  # An assertion can utilize additional generic type variables, other than the required `PropertyType`.  These would then be provided as positional arguments on the assertion annotation.
   #
   # ```
   # @[Assert::Assertions::Register(annotation: Assert::MyCustom)]
@@ -116,9 +116,9 @@ module Assert::Assertions
   # #
   # # For example, an ORM model where `.exists?` checks if a record exists with the given PK.
   # # I.e. `SELECT exists(select 1 from "users" WHERE id = 123);`
-  # class Exists(P, M) < Assert::Assertions::Assertion
+  # class Exists(PropertyType, Model) < Assert::Assertions::Assertion
   #   initializer(
-  #     "@actual": P
+  #     "@actual": PropertyType
   #   )
   #
   #   # :inherit:
@@ -129,7 +129,7 @@ module Assert::Assertions
   #   # :inherit:
   #   def valid? : Bool
   #     # Can use any class method defined on `M`
-  #     M.exists? @actual
+  #     Model.exists? @actual
   #   end
   # end
   # ```

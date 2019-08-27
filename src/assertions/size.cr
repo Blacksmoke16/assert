@@ -31,13 +31,13 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-# NOTE: `P` can be anything that implements `#size`.
-# NOTE: The generic `R` represents the type of *range*.
-class Assert::Assertions::Size(P, R) < Assert::Assertions::Assertion
+# NOTE: `PropertyType` can be anything that implements `#size`.
+# NOTE: The generic `RangeType` represents the type of *range*.
+class Assert::Assertions::Size(PropertyType, RangeType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P,
-    "@range": R,
-    "@normalizer": "Proc(P, P)? = nil",
+    "@actual": PropertyType,
+    "@range": RangeType,
+    "@normalizer": "Proc(PropertyType, PropertyType)? = nil",
     "@exact_message": "String? = nil",
     "@min_message": "String? = nil",
     "@max_message": "String? = nil"

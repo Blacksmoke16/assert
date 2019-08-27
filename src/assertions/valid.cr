@@ -31,9 +31,9 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::Valid(P) < Assert::Assertions::Assertion
+class Assert::Assertions::Valid(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P
+    "@actual": PropertyType
   )
 
   # :inherit:

@@ -29,10 +29,10 @@ require "../assertion"
 #
 # NOTE: *value* can be a hard-coded value like `10`, the name of another property, a constant, or the name of a method.
 # NOTE: The type of *value* and the property must match.
-class Assert::Assertions::DivisibleBy(P) < Assert::Assertions::Assertion
+class Assert::Assertions::DivisibleBy(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P,
-    "@value": P
+    "@actual": PropertyType,
+    "@value": PropertyType
   )
 
   # :inherit:

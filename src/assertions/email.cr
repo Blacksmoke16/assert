@@ -26,7 +26,7 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::Email(P) < Assert::Assertions::Assertion
+class Assert::Assertions::Email(PropertyType) < Assert::Assertions::Assertion
   initializer(
     "@actual": String?,
     "@mode": "EmailValidationMode = EmailValidationMode::Loose",

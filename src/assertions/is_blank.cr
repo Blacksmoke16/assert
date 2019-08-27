@@ -28,7 +28,7 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::IsBlank(P) < Assert::Assertions::Assertion
+class Assert::Assertions::IsBlank(PropertyType) < Assert::Assertions::Assertion
   initializer(
     "@actual": String?,
     "@normalizer": "Proc(String, String)? = nil"

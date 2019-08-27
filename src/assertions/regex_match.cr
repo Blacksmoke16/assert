@@ -26,7 +26,7 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::RegexMatch(P) < Assert::Assertions::Assertion
+class Assert::Assertions::RegexMatch(PropertyType) < Assert::Assertions::Assertion
   initializer(
     "@actual": String?,
     "@pattern": Regex,

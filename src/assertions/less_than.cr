@@ -38,11 +38,11 @@ require "../assertion"
 #
 # NOTE: *value* can be a hard-coded value like `10`, the name of another property, a constant, or the name of a method.
 # NOTE: The type of *value* and the property must match.
-# NOTE: `P` can be anything that defines a `#<` method.
-class Assert::Assertions::LessThan(P) < Assert::Assertions::Assertion
+# NOTE: `PropertyType` can be anything that defines a `#<` method.
+class Assert::Assertions::LessThan(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P,
-    "@value": P
+    "@actual": PropertyType,
+    "@value": PropertyType
   )
 
   # :inherit:

@@ -2,7 +2,7 @@ require "./spec_helper"
 
 @[Assert::Assertions::Register(annotation: Assert::Tesst)]
 # Test assertion to test common assertion behavior
-class TestAssertion(P) < Assert::Assertions::Assertion
+class TestAssertion(PropertyType) < Assert::Assertions::Assertion
   @some_key = "FOO"
   @some_bool = false
 

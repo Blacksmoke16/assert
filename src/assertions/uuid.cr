@@ -38,7 +38,7 @@ require "uuid"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::Uuid(P) < Assert::Assertions::Assertion
+class Assert::Assertions::Uuid(PropertyType) < Assert::Assertions::Assertion
   # The indxes where a strict `UUID` should have a hyphen.
   HYPHEN_INDEXES = {8, 13, 18, 23}
 

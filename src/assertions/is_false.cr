@@ -19,7 +19,7 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::IsFalse(P) < Assert::Assertions::Assertion
+class Assert::Assertions::IsFalse(PropertyType) < Assert::Assertions::Assertion
   initializer(
     "@actual": Bool?
   )

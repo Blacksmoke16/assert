@@ -19,9 +19,9 @@ require "../assertion"
 #
 # Example.new.valid? # => true
 # ```
-class Assert::Assertions::IsNil(P) < Assert::Assertions::Assertion
+class Assert::Assertions::IsNil(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": P
+    "@actual": PropertyType
   )
 
   # :inherit:
