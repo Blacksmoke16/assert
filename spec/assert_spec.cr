@@ -3,13 +3,16 @@ require "./spec_helper"
 class Test
   include Assert
 
-  def initialize(@group_1 : Int32, @group_2 : Int32); end
+  def initialize(@group_1 : Int32, @group_2 : Int32, @default_group : Int32); end
 
   @[Assert::EqualTo(value: 100, groups: ["group1"])]
   property group_1 : Int32
 
   @[Assert::EqualTo(value: 200, groups: ["group2"])]
   property group_2 : Int32
+
+  @[Assert::EqualTo(value: 300)]
+  property default_group : Int32
 end
 
 class SomeClass
@@ -25,25 +28,33 @@ describe Assert do
   describe "#valid?" do
     describe "with a valid object" do
       it "should return true" do
-        Test.new(100, 200).valid?.should be_true
+        Test.new(100, 200, 300).valid?.should be_true
       end
     end
 
     describe "with an invalid object" do
       it "should return false" do
-        Test.new(100, 100).valid?.should be_false
+        Test.new(100, 100, 300).valid?.should be_false
       end
     end
 
-    describe "with groups" do
-      it "should run assertions in that group" do
-        Test.new(100, 100).valid?(["group1"]).should be_true
+    describe :groups do
+      describe Array do
+        it "should run assertions in that group" do
+          Test.new(100, 100, 100).valid?(["group1"]).should be_true
+        end
       end
-    end
 
-    describe "with splat groups" do
-      it "should run assertions in that group" do
-        Test.new(50, 200).valid?("group2").should be_true
+      describe "splat" do
+        it "should run assertions in that group" do
+          Test.new(100, 100, 100).valid?(["group1"]).should be_true
+        end
+      end
+
+      describe "default" do
+        it "assertions without explicit groups should be in the default group" do
+          Test.new(200, 100, 300).valid?(["default"]).should be_true
+        end
       end
     end
   end
@@ -55,25 +66,33 @@ describe Assert do
 
     describe "with a valid object" do
       it "should return an empty array" do
-        Test.new(100, 200).validate.should be_empty
+        Test.new(100, 200, 300).validate.should be_empty
       end
     end
 
     describe "with an invalid object" do
       it "should return a non empty array" do
-        Test.new(100, 100).validate.should_not be_empty
+        Test.new(100, 100, 100).validate.should_not be_empty
       end
     end
 
-    describe "with groups" do
-      it "should run assertions in that group" do
-        Test.new(50, 200).validate(["group2"]).should be_empty
+    describe :groups do
+      describe Array do
+        it "should run assertions in that group" do
+          Test.new(50, 200, 100).validate(["group2"]).should be_empty
+        end
       end
-    end
 
-    describe "with splat groups" do
-      it "should run assertions in that group" do
-        Test.new(100, 250).validate("group1").should be_empty
+      describe "splat" do
+        it "should run assertions in that group" do
+          Test.new(100, 250, 100).validate("group1").should be_empty
+        end
+      end
+
+      describe "default" do
+        it "assertions without explicit groups should be in the default group" do
+          Test.new(200, 100, 300).validate(["default"]).should be_empty
+        end
       end
     end
   end
@@ -87,27 +106,35 @@ describe Assert do
 
     describe "with a valid object" do
       it "should return true" do
-        Test.new(100, 200).validate!.should be_nil
+        Test.new(100, 200, 300).validate!.should be_nil
       end
     end
 
     describe "with an invalid object" do
       it "should raise the proper exception" do
         expect_raises(Assert::Exceptions::ValidationError, "Validation tests failed") do
-          Test.new(100, 100).validate!
+          Test.new(100, 100, 100).validate!
         end
       end
     end
 
-    describe "with groups" do
-      it "should run assertions in that group" do
-        Test.new(50, 200).validate!(["group2"]).should be_nil
+    describe :groups do
+      describe Array do
+        it "should run assertions in that group" do
+          Test.new(50, 200, 150).validate!(["group2"]).should be_nil
+        end
       end
-    end
 
-    describe "with splat groups" do
-      it "should run assertions in that group" do
-        Test.new(100, 250).validate!("group1").should be_nil
+      describe "splat" do
+        it "should run assertions in that group" do
+          Test.new(100, 250, 150).validate!("group1").should be_nil
+        end
+      end
+
+      describe "default" do
+        it "assertions without explicit groups should be in the default group" do
+          Test.new(200, 100, 300).validate!(["default"]).should be_nil
+        end
       end
     end
   end

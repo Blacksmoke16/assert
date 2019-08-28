@@ -3,13 +3,14 @@ require "../assertion"
 @[Assert::Assertions::Register(annotation: Assert::Choice)]
 # Validates a property is a valid choice.
 #
-# Optional annotation fields:
+# ### Optional Arguments
 # * *min_matches* - Must select _at least_ *min_matches* to be valid.
 # * *min_message* - Message to display if too few choices are selected.
 # * *max_matches* - Must select _at most_ *max_matches* to be valid.
 # * *max_message* - Message to display if too many choices are selected.
 # * *multiple_message* - Message to display if one or more values in *actual* are not in *choices*.
 #
+# ### Example
 # ```
 # class Example
 #   include Assert

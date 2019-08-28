@@ -24,12 +24,12 @@ end
 describe Assert::Assertions::Assertion do
   describe ".new" do
     describe "#groups" do
-      it "groups should be empty by default" do
-        TestAssertion(Nil).new("prop").groups.should be_empty
+      it "should include the default group by default" do
+        TestAssertion(Nil).new("prop").groups.should eq ["default"]
       end
 
       it "should use provided groups if they were provided" do
-        TestAssertion(Nil).new("prop", groups: ["one", "two"]).groups.should_not be_empty
+        TestAssertion(Nil).new("prop", groups: ["one", "two"]).groups.should eq ["one", "two"]
       end
     end
 

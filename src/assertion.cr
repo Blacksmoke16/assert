@@ -86,24 +86,31 @@ module Assert::Assertions
   # ```
   #
   # ### Validation Groups
-  # By default, `Assert` bases the validity of an object based on _all_ the assertions defined on it.  However, each assertion has an optional `#groups` property that can be used to assign
-  # that assertion to a given group(s).  Validation groups can be used to run a subset of assertions, and base the validity of the object on that subset.
+  # By default, `Assert` bases the validity of an object based on _all_ the assertions defined on it.  However, each assertion has an optional
+  # `#groups` property that can be used to assign that assertion to a given group(s). Assertions without explicit groups are automatically assigned
+  # to the "default" group.  This allows assertions without a group to be ran in conjunction with those in an explicit group.
+  # Validation groups can be used to run a subset of assertions, and base the validity of the object on that subset.
   # ```
   # class Groups
   #   include Assert
   #
-  #   def initialize(@group_1 : Int32, @group_2 : Int32); end
+  #   def initialize(@group_1 : Int32, @group_2 : Int32, @default_group : Int32); end
   #
   #   @[Assert::EqualTo(value: 100, groups: ["group1"])]
   #   property group_1 : Int32
   #
   #   @[Assert::EqualTo(value: 200, groups: ["group2"])]
   #   property group_2 : Int32
+  #
+  #   @[Assert::EqualTo(value: 300)]
+  #   property default_group : Int32
   # end
   #
-  # Groups.new(100, 200).valid?             # => true
-  # Groups.new(100, 100).valid?             # => false
-  # Groups.new(100, 100).valid?(["group1"]) # => true
+  # Groups.new(100, 200, 300).valid?                      # => true
+  # Groups.new(100, 100, 100).valid?                      # => false
+  # Groups.new(100, 100, 100).valid?(["group1"])          # => true
+  # Groups.new(200, 100, 300).valid?(["default"])         # => true
+  # Groups.new(100, 200, 200).valid?("group1", "default") # => false
   # ```
   #
   # ### Generics
@@ -133,7 +140,6 @@ module Assert::Assertions
   #   end
   # end
   # ```
-  #
   # ```
   # class Post < SomeORM::Model
   #   include Assert
@@ -176,7 +182,7 @@ module Assert::Assertions
     # Sets the *property_name*, and *message*/*groups* if none were provided.
     def initialize(@property_name : String, message : String? = nil, groups : Array(String)? = nil)
       @message_template = message || default_message_template
-      @groups = groups || Array(String).new
+      @groups = groups || ["default"]
     end
 
     # Returns the default `#message_template` to use if no *message* is provided.
