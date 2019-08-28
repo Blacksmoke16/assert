@@ -28,9 +28,9 @@ require "../assertion"
 # ```
 class Assert::Assertions::Email(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": String?,
-    "@mode": "EmailValidationMode = EmailValidationMode::Loose",
-    "@normalizer": "Proc(String, String)? = nil"
+    actual: String?,
+    mode: "EmailValidationMode = EmailValidationMode::Loose",
+    normalizer: "Proc(String, String)? = nil"
   )
 
   # :inherit:

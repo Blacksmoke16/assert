@@ -32,10 +32,10 @@ require "../assertion"
 # ```
 class Assert::Assertions::Url(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": String?,
-    "@protocols": "Array(String) = %w(http https)",
-    "@relative_protocol": "Bool = false",
-    "@normalizer": "Proc(String, String)? = nil"
+    actual: String?,
+    protocols: "Array(String) = %w(http https)",
+    relative_protocol: "Bool = false",
+    normalizer: "Proc(String, String)? = nil"
   )
 
   # :inherit:

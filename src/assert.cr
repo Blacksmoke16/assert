@@ -17,16 +17,14 @@ require "./exceptions/*"
 #
 #   def initialize(@name : String, @age : Int32?, @email : String, @password : String); end
 #
+#   # Assert their name is not blank
+#   @[Assert::NotBlank]
 #   property name : String
 #
 #   # Asserts that their age is >= 0 AND not nil
 #   @[Assert::NotNil]
 #   @[Assert::GreaterThanOrEqual(value: 0)]
 #   property age : Int32?
-#
-#   # Assert their name is not blank
-#   @[Assert::NotBlank]
-#   property name : String
 #
 #   # Assert their email is not blank AND is a valid format
 #   @[Assert::Email(message: "'{{actual}}' is not a proper email")]

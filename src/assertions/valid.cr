@@ -33,7 +33,7 @@ require "../assertion"
 # ```
 class Assert::Assertions::Valid(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": PropertyType
+    actual: PropertyType
   )
 
   # :inherit:

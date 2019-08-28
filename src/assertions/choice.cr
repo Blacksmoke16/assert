@@ -36,13 +36,13 @@ require "../assertion"
 # NOTE: The generic `ChoicesType` represents the type of *choices*.
 class Assert::Assertions::Choice(PropertyType, ChoicesType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": PropertyType,
-    "@choices": ChoicesType,
-    "@min_matches": "Int32? = nil",
-    "@max_matches": "Int32? = nil",
-    "@min_message": "String? = nil",
-    "@max_message": "String? = nil",
-    "@multiple_message": "String? = nil"
+    actual: PropertyType,
+    choices: ChoicesType,
+    min_matches: "Int32? = nil",
+    max_matches: "Int32? = nil",
+    min_message: "String? = nil",
+    max_message: "String? = nil",
+    multiple_message: "String? = nil"
   )
 
   # :inherit:

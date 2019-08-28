@@ -31,8 +31,8 @@ require "../assertion"
 # NOTE: The type of *value* and the property must match.
 class Assert::Assertions::DivisibleBy(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": PropertyType,
-    "@value": PropertyType
+    actual: PropertyType,
+    value: PropertyType
   )
 
   # :inherit:

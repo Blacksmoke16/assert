@@ -30,8 +30,8 @@ require "../assertion"
 # ```
 class Assert::Assertions::IsBlank(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": String?,
-    "@normalizer": "Proc(String, String)? = nil"
+    actual: String?,
+    normalizer: "Proc(String, String)? = nil"
   )
 
   # :inherit:

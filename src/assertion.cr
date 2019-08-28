@@ -53,9 +53,9 @@ module Assert::Assertions
   #
   #   # The initialize method could also have been written using the `Assertion.initializer` macro.
   #   initializer(
-  #     "@actual": String?,
-  #     "@some_value": Int32,
-  #     "@some_bool": "Bool = true"
+  #     actual: String?,
+  #     some_value: Int32,
+  #     some_bool: "Bool = true"
   #   )
   #
   #   # :inherit:
@@ -118,14 +118,14 @@ module Assert::Assertions
   # An assertion can utilize additional generic type variables, other than the required `PropertyType`.  These would then be provided as positional arguments on the assertion annotation.
   #
   # ```
-  # @[Assert::Assertions::Register(annotation: Assert::MyCustom)]
+  # @[Assert::Assertions::Register(annotation: Assert::Exists)]
   # # A custom assertion that validates if a record exists with the given *id*.
   # #
   # # For example, an ORM model where `.exists?` checks if a record exists with the given PK.
   # # I.e. `SELECT exists(select 1 from "users" WHERE id = 123);`
   # class Exists(PropertyType, Model) < Assert::Assertions::Assertion
   #   initializer(
-  #     "@actual": PropertyType
+  #     actual: PropertyType
   #   )
   #
   #   # :inherit:
@@ -200,7 +200,7 @@ module Assert::Assertions
     #
     # Handles setting the required parent arguments and calling super.
     # ```
-    # initializer("@actual": String?, "@some_bool": "Bool = false")
+    # initializer(actual: String?, some_bool: "Bool = false")
     # # def initialize(
     # #   property_name : String,
     # #   @actual : ::Union(String, ::Nil),
@@ -215,7 +215,7 @@ module Assert::Assertions
       def initialize(
         property_name : String,
         {% for ivar, type in ivars %}
-          {{ivar.id}} : {{type.id}},
+          @{{ivar.id}} : {{type.id}},
         {% end %}
         message : String? = nil,
         groups : Array(String)? = nil,

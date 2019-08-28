@@ -7,6 +7,8 @@ class Assert::Exceptions::ValidationError < Exception
   end
 
   # Returns a JSON/pretty JSON object for `self`.
+  #
+  # Can be overwritten to change the JSON schema.
   # ```
   # error = Assert::Exceptions::ValidationError.new([
   #   Assert::Assertions::NotBlank(String?).new("name", ""),

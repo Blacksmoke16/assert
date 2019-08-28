@@ -41,8 +41,8 @@ require "../assertion"
 # NOTE: `PropertyType` can be anything that defines a `#<` method.
 class Assert::Assertions::LessThan(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": PropertyType,
-    "@value": PropertyType
+    actual: PropertyType,
+    value: PropertyType
   )
 
   # :inherit:

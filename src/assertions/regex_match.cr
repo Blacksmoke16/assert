@@ -28,10 +28,10 @@ require "../assertion"
 # ```
 class Assert::Assertions::RegexMatch(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": String?,
-    "@pattern": Regex,
-    "@match": "Bool = true",
-    "@normalizer": "Proc(String, String)? = nil"
+    actual: String?,
+    pattern: Regex,
+    match: "Bool = true",
+    normalizer: "Proc(String, String)? = nil"
   )
 
   # :inherit:

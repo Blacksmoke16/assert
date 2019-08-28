@@ -43,11 +43,11 @@ class Assert::Assertions::Uuid(PropertyType) < Assert::Assertions::Assertion
   HYPHEN_INDEXES = {8, 13, 18, 23}
 
   initializer(
-    "@actual": String?,
-    "@versions": "Array(UUID::Version) = [UUID::Version::V1, UUID::Version::V2, UUID::Version::V3, UUID::Version::V4, UUID::Version::V5]",
-    "@variants": "Array(UUID::Variant) = [UUID::Variant::RFC4122]",
-    "@strict": "Bool = true",
-    "@normalizer": "Proc(String, String)? = nil"
+    actual: String?,
+    versions: "Array(UUID::Version) = [UUID::Version::V1, UUID::Version::V2, UUID::Version::V3, UUID::Version::V4, UUID::Version::V5]",
+    variants: "Array(UUID::Variant) = [UUID::Variant::RFC4122]",
+    strict: "Bool = true",
+    normalizer: "Proc(String, String)? = nil"
   )
 
   # :inherit:

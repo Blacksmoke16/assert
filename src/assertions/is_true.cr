@@ -21,7 +21,7 @@ require "../assertion"
 # ```
 class Assert::Assertions::IsTrue(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": Bool?
+    actual: Bool?
   )
 
   # :inherit:

@@ -28,9 +28,9 @@ require "../assertion"
 # ```
 class Assert::Assertions::Ip(PropertyType) < Assert::Assertions::Assertion
   initializer(
-    "@actual": String?,
-    "@version": "IPVersion = IPVersion::IPV4",
-    "@normalizer": "Proc(String, String)? = nil"
+    actual: String?,
+    version: "IPVersion = IPVersion::IPV4",
+    normalizer: "Proc(String, String)? = nil"
   )
 
   # :inherit:
