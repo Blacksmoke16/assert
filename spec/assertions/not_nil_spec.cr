@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::NotNil do
-  assert_template(Assert::Assertions::NotNil, "'{{property_name}}' should not be null")
+  assert_template(Assert::Assertions::NotNil, "'%{property_name}' should not be null")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::NotNil, valid: false)

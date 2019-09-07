@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::Choice do
-  assert_template(Assert::Assertions::Choice, "'{{property_name}}' is not a valid choice", choices: ["one", "two"], type_vars: [String?, Array(String)])
+  assert_template(Assert::Assertions::Choice, "'%{property_name}' is not a valid choice", choices: ["one", "two"], type_vars: [String?, Array(String)])
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Choice, choices: ["one", "two"], type_vars: [String?, Array(String)])

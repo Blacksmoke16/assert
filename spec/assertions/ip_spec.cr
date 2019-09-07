@@ -70,7 +70,7 @@ IPV4_WHITESPACE = [
 ]
 
 describe Assert::Ip do
-  assert_template(Assert::Assertions::Ip, "'{{property_name}}' is not a valid IP address")
+  assert_template(Assert::Assertions::Ip, "'%{property_name}' is not a valid IP address")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Ip)

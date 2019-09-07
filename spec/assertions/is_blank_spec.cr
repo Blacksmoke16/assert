@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::IsBlank do
-  assert_template(Assert::Assertions::IsBlank, "'{{property_name}}' should be blank")
+  assert_template(Assert::Assertions::IsBlank, "'%{property_name}' should be blank")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::IsBlank)

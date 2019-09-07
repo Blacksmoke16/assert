@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::EqualTo do
-  assert_template(Assert::Assertions::EqualTo, "'{{property_name}}' should be equal to '{{value}}'", value: nil)
+  assert_template(Assert::Assertions::EqualTo, "'%{property_name}' should be equal to '%{value}'", value: nil)
 
   describe "#valid?" do
     describe "with equal values" do

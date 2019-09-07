@@ -37,7 +37,7 @@ class Assert::Assertions::DivisibleBy(PropertyType) < Assert::Assertions::Assert
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should be a multiple of '{{value}}'"
+    "'%{property_name}' should be a multiple of '%{value}'"
   end
 
   # :inherit:

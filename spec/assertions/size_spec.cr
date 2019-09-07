@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::Size do
-  assert_template(Assert::Assertions::Size, "'{{property_name}}' is not the correct size", range: 0.0..10.0, type_vars: [String?, Range(Float64, Float64)])
+  assert_template(Assert::Assertions::Size, "'%{property_name}' is not the correct size", range: 0.0..10.0, type_vars: [String?, Range(Float64, Float64)])
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Size, range: 0.0..10.0, type_vars: [String?, Range(Float64, Float64)])

@@ -54,7 +54,7 @@ EMAILS_WITH_WHITESPACE = [
 ]
 
 describe Assert::Email do
-  assert_template(Assert::Assertions::Email, "'{{property_name}}' is not a valid email address")
+  assert_template(Assert::Assertions::Email, "'%{property_name}' is not a valid email address")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Email)

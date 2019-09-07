@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::InRange do
-  assert_template(Assert::Assertions::InRange, "'{{property_name}}' is out of range", range: 0.0..10.0, type_vars: [Float64?, Range(Float64, Float64)])
+  assert_template(Assert::Assertions::InRange, "'%{property_name}' is out of range", range: 0.0..10.0, type_vars: [Float64?, Range(Float64, Float64)])
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::InRange, [Float64?, Range(Float64, Float64)], range: 0.0..10.0)

@@ -41,7 +41,7 @@ class Assert::Assertions::NotEqualTo(PropertyType) < Assert::Assertions::Asserti
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should not be equal to '{{value}}'"
+    "'%{property_name}' should not be equal to '%{value}'"
   end
 
   # :inherit:

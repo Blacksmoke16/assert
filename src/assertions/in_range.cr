@@ -24,7 +24,7 @@ require "../assertion"
 #   @[Assert::InRange(Range(Float64, Float64), range: 0.0..1000.0)]
 #   property range : Float64 = 3.14
 #
-#   @[Assert::InRange(Range(Int32, Int32), range: 0..10, not_in_range_message: "That is not a valid {{property_name}}")]
+#   @[Assert::InRange(Range(Int32, Int32), range: 0..10, not_in_range_message: "That is not a valid %{property_name}")]
 #   property fav_number : UInt8 = 8_u8
 #
 #   @[Assert::InRange(Range(UInt8, UInt8), range: 0_u8..50_u8, min_message: "Number of cores must be positive", max_message: "There must be less than 50 cores")]
@@ -45,7 +45,7 @@ class Assert::Assertions::InRange(PropertyType, RangeType) < Assert::Assertions:
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is out of range"
+    "'%{property_name}' is out of range"
   end
 
   # :inherit:
@@ -58,11 +58,11 @@ class Assert::Assertions::InRange(PropertyType, RangeType) < Assert::Assertions:
     upper_bound = @range.end
 
     @message_template = if lower_bound && upper_bound
-                          @not_in_range_message || "'{{property_name}}' should be between #{lower_bound} and #{@range.excludes_end? ? upper_bound - 1 : upper_bound}"
+                          @not_in_range_message || "'%{property_name}' should be between #{lower_bound} and #{@range.excludes_end? ? upper_bound - 1 : upper_bound}"
                         elsif upper_bound && (@range.excludes_end? ? actual >= upper_bound : actual > upper_bound)
-                          @max_message || "'{{property_name}}' should be #{@range.excludes_end? ? upper_bound - 1 : upper_bound} or less"
+                          @max_message || "'%{property_name}' should be #{@range.excludes_end? ? upper_bound - 1 : upper_bound} or less"
                         else
-                          @min_message || "'{{property_name}}' should be #{lower_bound} or more"
+                          @min_message || "'%{property_name}' should be #{lower_bound} or more"
                         end
     false
   end

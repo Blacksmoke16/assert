@@ -45,7 +45,7 @@ class Assert::Assertions::Size(PropertyType, RangeType) < Assert::Assertions::As
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not the correct size"
+    "'%{property_name}' is not the correct size"
   end
 
   # :inherit:
@@ -54,11 +54,11 @@ class Assert::Assertions::Size(PropertyType, RangeType) < Assert::Assertions::As
     return true unless (actual = (normalizer = @normalizer) ? normalizer.call @actual : @actual)
     return true if @range.includes? actual.size
     @message_template = if @range.end == @range.begin && !@range.includes? actual.size
-                          @exact_message || "'{{property_name}}' is not the proper size.  It should have exactly #{@range.end} #{actual.is_a?(String) ? "character(s)" : "element(s)"}"
+                          @exact_message || "'%{property_name}' is not the proper size.  It should have exactly #{@range.end} #{actual.is_a?(String) ? "character(s)" : "element(s)"}"
                         elsif @range.excludes_end? ? actual.size >= @range.end : actual.size > @range.end
-                          @max_message || "'{{property_name}}' is too long.  It should have #{@range.end} #{actual.is_a?(String) ? "character(s)" : "element(s)"} or less"
+                          @max_message || "'%{property_name}' is too long.  It should have #{@range.end} #{actual.is_a?(String) ? "character(s)" : "element(s)"} or less"
                         else
-                          @min_message || "'{{property_name}}' is too short.  It should have #{@range.begin} #{actual.is_a?(String) ? "character(s)" : "element(s)"} or more"
+                          @min_message || "'%{property_name}' is too short.  It should have #{@range.begin} #{actual.is_a?(String) ? "character(s)" : "element(s)"} or more"
                         end
     false
   end

@@ -38,7 +38,7 @@ class Assert::Assertions::Valid(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should be valid"
+    "'%{property_name}' should be valid"
   end
 
   # :inherit:

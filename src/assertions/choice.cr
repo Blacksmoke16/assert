@@ -47,7 +47,7 @@ class Assert::Assertions::Choice(PropertyType, ChoicesType) < Assert::Assertions
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not a valid choice"
+    "'%{property_name}' is not a valid choice"
   end
 
   # :inherit:
@@ -60,18 +60,18 @@ class Assert::Assertions::Choice(PropertyType, ChoicesType) < Assert::Assertions
 
       if min = @min_matches
         return true unless num_matches < min
-        @message_template = @min_message || "'{{property_name}}': You must select at least #{@min_matches} choice(s)"
+        @message_template = @min_message || "'%{property_name}': You must select at least #{@min_matches} choice(s)"
         return false
       end
 
       if max = @max_matches
         return true unless num_matches > max
-        @message_template = @max_message || "'{{property_name}}': You must select at most #{@max_matches} choice(s)"
+        @message_template = @max_message || "'%{property_name}': You must select at most #{@max_matches} choice(s)"
         return false
       end
 
       if num_matches != @choices.size
-        @message_template = @multiple_message || "'{{property_name}}': One or more of the given values is invalid"
+        @message_template = @multiple_message || "'%{property_name}': One or more of the given values is invalid"
         return false
       end
 

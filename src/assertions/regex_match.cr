@@ -36,7 +36,7 @@ class Assert::Assertions::RegexMatch(PropertyType) < Assert::Assertions::Asserti
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not valid"
+    "'%{property_name}' is not valid"
   end
 
   # :inherit:

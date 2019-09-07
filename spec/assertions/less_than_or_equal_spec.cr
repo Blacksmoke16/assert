@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::LessThanOrEqual do
-  assert_template(Assert::Assertions::LessThanOrEqual, "'{{property_name}}' should be less than or equal to '{{value}}'", value: nil)
+  assert_template(Assert::Assertions::LessThanOrEqual, "'%{property_name}' should be less than or equal to '%{value}'", value: nil)
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::LessThanOrEqual, value: 10, type_vars: [Int32?])

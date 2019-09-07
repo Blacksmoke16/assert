@@ -35,7 +35,7 @@ class Assert::Assertions::Email(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not a valid email address"
+    "'%{property_name}' is not a valid email address"
   end
 
   # :inherit:

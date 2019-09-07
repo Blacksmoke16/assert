@@ -26,7 +26,7 @@ class Assert::Assertions::NotNil(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should not be null"
+    "'%{property_name}' should not be null"
   end
 
   # :inherit:

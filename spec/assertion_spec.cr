@@ -5,6 +5,7 @@ require "./spec_helper"
 class TestAssertion(PropertyType) < Assert::Assertions::Assertion
   @some_key = "FOO"
   @some_bool = false
+  @some_number = 17
 
   def initialize(property_name : String, message : String? = nil, groups : Array(String)? = nil)
     super property_name, message, groups
@@ -35,7 +36,11 @@ describe Assert::Assertions::Assertion do
 
     describe "#message" do
       it "should replace placeholders with their value" do
-        TestAssertion(Nil).new("prop", message: "{{some_key}} is {{some_bool}}").message.should eq "FOO is false"
+        TestAssertion(Nil).new("prop", message: "%{some_key} is %{some_bool}").message.should eq "FOO is false"
+      end
+
+      it "should allow ivars to be formatted via sprintf" do
+        TestAssertion(Nil).new("prop", message: "%{some_number} is %<some_number>0.4f").message.should eq "17 is 17.0000"
       end
     end
 

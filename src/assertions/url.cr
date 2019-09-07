@@ -40,7 +40,7 @@ class Assert::Assertions::Url(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not a valid URL"
+    "'%{property_name}' is not a valid URL"
   end
 
   # :inherit:

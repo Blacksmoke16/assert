@@ -128,7 +128,7 @@ URLS_WITH_WHITESPACE = [
 ]
 
 describe Assert::Url do
-  assert_template(Assert::Assertions::Url, "'{{property_name}}' is not a valid URL")
+  assert_template(Assert::Assertions::Url, "'%{property_name}' is not a valid URL")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Url)

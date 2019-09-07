@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::DivisibleBy do
-  assert_template(Assert::Assertions::DivisibleBy, "'{{property_name}}' should be a multiple of '{{value}}'", value: 19.0, type_vars: [Float64?])
+  assert_template(Assert::Assertions::DivisibleBy, "'%{property_name}' should be a multiple of '%{value}'", value: 19.0, type_vars: [Float64?])
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::DivisibleBy, value: 10, type_vars: [Int32?])

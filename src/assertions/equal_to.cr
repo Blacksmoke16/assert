@@ -41,7 +41,7 @@ class Assert::Assertions::EqualTo(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should be equal to '{{value}}'"
+    "'%{property_name}' should be equal to '%{value}'"
   end
 
   # :inherit:

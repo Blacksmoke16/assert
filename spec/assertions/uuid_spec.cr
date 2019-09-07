@@ -95,7 +95,7 @@ STRICT_UUIDS_WITH_WHITESPACE = [
 ]
 
 describe Assert::Email do
-  assert_template(Assert::Assertions::Uuid, "'{{property_name}}' is not a valid UUID")
+  assert_template(Assert::Assertions::Uuid, "'%{property_name}' is not a valid UUID")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Uuid)

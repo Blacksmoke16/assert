@@ -35,7 +35,7 @@ class Assert::Assertions::Ip(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not a valid IP address"
+    "'%{property_name}' is not a valid IP address"
   end
 
   # :inherit:

@@ -27,7 +27,7 @@ require "./exceptions/*"
 #   property age : Int32?
 #
 #   # Assert their email is not blank AND is a valid format
-#   @[Assert::Email(message: "'{{actual}}' is not a proper email")]
+#   @[Assert::Email(message: "'%{actual}' is not a proper email")]
 #   @[Assert::NotBlank]
 #   property email : String
 #

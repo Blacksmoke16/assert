@@ -52,7 +52,7 @@ class Assert::Assertions::Uuid(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' is not a valid UUID"
+    "'%{property_name}' is not a valid UUID"
   end
 
   # :inherit:

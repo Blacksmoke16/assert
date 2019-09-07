@@ -47,7 +47,7 @@ class Assert::Assertions::GreaterThanOrEqual(PropertyType) < Assert::Assertions:
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should be greater than or equal to '{{value}}'"
+    "'%{property_name}' should be greater than or equal to '%{value}'"
   end
 
   # :inherit:

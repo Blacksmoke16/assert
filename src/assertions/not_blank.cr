@@ -36,7 +36,7 @@ class Assert::Assertions::NotBlank(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should not be blank"
+    "'%{property_name}' should not be blank"
   end
 
   # :inherit:

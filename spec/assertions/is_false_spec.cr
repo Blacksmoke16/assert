@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::IsFalse do
-  assert_template(Assert::Assertions::IsFalse, "'{{property_name}}' should be false")
+  assert_template(Assert::Assertions::IsFalse, "'%{property_name}' should be false")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::IsFalse, [Bool?])

@@ -10,7 +10,7 @@ class SomeObj
 end
 
 describe Assert::Valid do
-  assert_template(Assert::Assertions::Valid, "'{{property_name}}' should be valid")
+  assert_template(Assert::Assertions::Valid, "'%{property_name}' should be valid")
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::Valid)

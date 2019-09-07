@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 describe Assert::RegexMatch do
-  assert_template(Assert::Assertions::RegexMatch, "'{{property_name}}' is not valid", pattern: /foo/)
+  assert_template(Assert::Assertions::RegexMatch, "'%{property_name}' is not valid", pattern: /foo/)
 
   describe "#valid?" do
     assert_nil(Assert::Assertions::RegexMatch, pattern: /foo/)

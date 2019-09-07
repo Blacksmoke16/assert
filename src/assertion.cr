@@ -61,8 +61,8 @@ module Assert::Assertions
   #   # :inherit:
   #   def default_message_template : String
   #     # The default message template to use if one is not supplied.
-  #     # Instance variables on `self` can be used within the template by surrounding the ivar's name in double curly braces, E.x. `{{some_bool}}`.
-  #     "'{{property_name}}' is not valid."
+  #     # Instance variables on `self` can be referenced/formatted within the template by using named sprintf named arguments. E.x. `%{some_bool}`, or `%<some_number>0.4d`, etc.
+  #     "'%{property_name}' is not valid."
   #   end
   #
   #   # :inherit:
@@ -130,7 +130,7 @@ module Assert::Assertions
   #
   #   # :inherit:
   #   def default_message_template : String
-  #     "'{{actual}}' is not a valid {{property_name}}."
+  #     "'%{actual}' is not a valid %{property_name}."
   #   end
   #
   #   # :inherit:
@@ -227,14 +227,16 @@ module Assert::Assertions
     macro inherited
       # :inherit:
       def message : String
-        @message ||= @message_template.gsub(/\{\{\w+\}\}/,
-          \{% begin %}
-            {
-              \{% for ivar in @type.instance_vars %}
-                "\\{\\{\{{ivar}}}}" => @\{{ivar}},
-              \{% end %}
-            }
-          \{% end %}
+        @message ||= sprintf(@message_template,
+          {% verbatim do %}
+            {% begin %}
+              {
+              {% for ivar in @type.instance_vars %}
+                {{ivar.id}}: @{{ivar}},
+              {% end %}
+              }
+            {% end %}
+          {% end %}
         )
       end
     end

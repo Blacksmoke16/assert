@@ -26,7 +26,7 @@ class Assert::Assertions::IsFalse(PropertyType) < Assert::Assertions::Assertion
 
   # :inherit:
   def default_message_template : String
-    "'{{property_name}}' should be false"
+    "'%{property_name}' should be false"
   end
 
   # :inherit:
