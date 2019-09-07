@@ -1,5 +1,4 @@
 # Assert
-[![Build Status](https://travis-ci.org/Blacksmoke16/assert.svg?branch=master)](https://travis-ci.org/Blacksmoke16/assert)
 [![Latest release](https://img.shields.io/github/release/Blacksmoke16/assert.svg?style=flat-square)](https://github.com/Blacksmoke16/assert/releases)
 
 Extensible annotation based object validation library based on [Symfony Validation Constraint Annotations](https://symfony.com/doc/current/reference/constraints.html).
@@ -11,7 +10,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   assert:
-    github: Blacksmoke16/assert
+    github: blacksmoke16/assert
 ```
 
 ## Documentation
