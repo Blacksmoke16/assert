@@ -25,6 +25,124 @@ class SomeClass
 end
 
 describe Assert do
+  # Will just do a few of each "type"
+  describe "shortcut methods" do
+    # Allows any type
+    describe ".not_nil" do
+      describe "with a not nil value" do
+        it "should be true" do
+          Assert.not_nil(17).should be_true
+        end
+      end
+
+      describe "with a nil value" do
+        it "should be false" do
+          Assert.not_nil(nil).should be_false
+        end
+      end
+    end
+
+    describe ".not_nil!" do
+      describe "with a not nil value" do
+        it "should be true" do
+          Assert.not_nil!(17).should be_true
+        end
+      end
+
+      describe "with a nil value" do
+        it "should raise an exception" do
+          expect_raises Assert::Exceptions::ValidationError, "Validation tests failed: 'actual' should not be null" do
+            Assert.not_nil!(nil)
+          end
+        end
+      end
+
+      describe "with a custom message" do
+        it "should raise an exception with the given message" do
+          expect_raises Assert::Exceptions::ValidationError, "Validation tests failed: Age should not be nil" do
+            Assert.not_nil!(nil, message: "Age should not be nil")
+          end
+        end
+      end
+    end
+
+    # Allows specific type
+    describe ".not_blank" do
+      describe "with a non blank value" do
+        it "should be true" do
+          Assert.not_blank("foo").should be_true
+        end
+      end
+
+      describe "with a blank value" do
+        it "should be false" do
+          Assert.not_blank("  ").should be_false
+        end
+      end
+
+      describe "with a normalizer" do
+        it "should be normalized to be true" do
+          Assert.not_blank("  ", normalizer: ->(actual : String) { actual + 'f' }).should be_true
+        end
+      end
+    end
+
+    describe ".not_blank!" do
+      describe "with a non blank value" do
+        it "should be true" do
+          Assert.not_blank!("foo").should be_true
+        end
+      end
+
+      describe "with a blank value" do
+        it "should raise an exception" do
+          expect_raises Assert::Exceptions::ValidationError, "Validation tests failed: 'actual' should not be blank" do
+            Assert.not_blank!("")
+          end
+        end
+      end
+    end
+
+    # Has multiple types
+    describe ".choice" do
+      describe "with a valid choice" do
+        it "should be true" do
+          Assert.choice("Choice", ["One", "Foo", "Choice"]).should be_true
+        end
+      end
+
+      describe "with an invalid choice" do
+        it "should be false" do
+          Assert.choice("Bar", ["One", "Foo", "Choice"]).should be_false
+        end
+      end
+    end
+
+    describe ".choice!" do
+      describe "with a valid choice" do
+        it "should be true" do
+          Assert.choice!("Choice", ["One", "Foo", "Choice"]).should be_true
+        end
+      end
+
+      describe "with an invalid choice" do
+        it "should raise an exception" do
+          expect_raises Assert::Exceptions::ValidationError, "Validation tests failed: 'actual' is not a valid choice" do
+            Assert.choice!("Bar", ["One", "Foo", "Choice"])
+          end
+        end
+      end
+
+      describe "with a custom message" do
+        it "should raise an exception with the given message" do
+          expect_raises Assert::Exceptions::ValidationError, "Validation tests failed: Invalid choice: Bar" do
+            Assert.choice!("Bar", ["One", "Foo", "Choice"], message: "Invalid choice: %{actual}")
+          end
+        end
+      end
+    end
+  end
+
   describe "#valid?" do
     describe "with a valid object" do
       it "should return true" do
@@ -101,7 +219,7 @@ describe Assert do
     it "should preserve the message if it was changed" do
       SomeClass.new.validate!
     rescue ex : Assert::Exceptions::ValidationError
-      ex.to_s.should eq "Validation tests failed:  'exact_value' is not the proper size.  It should have exactly 5 character(s)"
+      ex.to_s.should eq "Validation tests failed: 'exact_value' is not the proper size.  It should have exactly 5 character(s)"
     end
 
     describe "with a valid object" do

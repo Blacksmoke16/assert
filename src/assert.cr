@@ -4,11 +4,15 @@ require "./exceptions/*"
 
 # Annotation based object validation library.
 #
-# See `Assert::Assertions` for the full list, and each assertion for more detailed information/examples.
+# See the `Assert::Assertions` namespace for the full assertion list as well as each assertion class for more detailed information/examples.
 #
-# See `Assert::Assertions::Assertion` for assertion usage documentation.
+# See `Assert::Assertions::Assertion` for common/high level assertion usage documentation.
 #
 # ### Example Usage
+#
+# `Assert` supports both object based validations via annotations as well as ad hoc value validations via class methods.
+# #### Object Validation
+#
 # ```
 # require "assert"
 #
@@ -58,6 +62,27 @@ require "./exceptions/*"
 #   ex.to_json # => {"code":400,"message":"Validation tests failed","errors":["'foobar' is not a proper email","'password' is too short.  It should have 7 character(s) or more"]}
 # end
 # ```
+#
+# #### Ad Hoc Validation
+# ```
+# # Each assertion automatically defines a shortcut class method for ad hoc validations.
+# Assert.not_blank "foo" # => true
+# Assert.not_blank ""    # => false
+#
+# begin
+#   # The bang version will raise if the value is invalid.
+#   Assert.not_blank! "   "
+# rescue ex
+#   ex.to_s # => Validation tests failed: 'actual' should not be blank
+# end
+#
+# begin
+#   # Optional arguments can be used just like the annotation versions.
+#   Assert.equal_to! 15, 20, message: "%{actual} does not equal %{value}"
+# rescue ex
+#   ex.to_s # => Validation tests failed: 15 does not equal 20
+# end
+# ```
 module Assert
   # Define the Assertion annotations.
   macro finished
@@ -68,6 +93,30 @@ module Assert
           {% raise "#{assertion.name} must apply the `Assert::Assertions::Register` annotation." unless ann %}
           # :nodoc:
           annotation {{ann[:annotation].id}}; end
+
+          {% initializer = assertion.methods.find &.name.==("initialize") %}
+          {% method_name = ann[:annotation].stringify.split("::").last.underscore.id %}
+          {% method_args = initializer.args[1..-1] %}
+          {% method_vars = initializer.args[1..-1].map(&.name).splat %}
+          {% free_variables = assertion.type_vars %}
+          {% generic_args = free_variables.size > 1 ? ",#{free_variables[1..-1].splat}".id : "".id %}
+
+          # `{{assertion.stringify.gsub(/\(.*\)/, "").id}}` assertion shortcut method.
+          #
+          # Can be used for ad hoc validations when applying annotations is not possible.
+          def self.{{method_name}}({{method_args.splat}}) : Bool forall {{free_variables.splat}}
+            assertion = {{assertion.name.gsub(/\(.*\)/, "").id}}({{method_args.first.restriction}}{{generic_args}}).new(\{{@def.args.first.name.stringify}}, {{method_vars}})
+            assertion.valid?
+          end
+
+          # `{{assertion.stringify.gsub(/\(.*\)/, "").id}}` assertion shortcut method.
+          #
+          # Can be used for ad hoc validations when applying annotations is not possible.
+          # Raises an `Assert::Exceptions::ValidationError` if the value is not valid.
+          def self.{{method_name}}!({{method_args.splat}}) : Bool forall {{free_variables.splat}}
+            assertion = {{assertion.name.gsub(/\(.*\)/, "").id}}({{method_args.first.restriction}}{{generic_args}}).new(\{{@def.args.first.name.stringify}}, {{method_vars}})
+            assertion.valid? || raise Assert::Exceptions::ValidationError.new assertion
+          end
         {% end %}
       {% end %}
     {% end %}

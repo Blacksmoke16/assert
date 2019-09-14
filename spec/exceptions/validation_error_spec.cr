@@ -2,8 +2,16 @@ require "../spec_helper"
 
 describe Assert::Exceptions::ValidationError do
   describe "#new" do
-    it "returns the correct message" do
-      Assert::Exceptions::ValidationError.new([] of Assert::Assertions::Assertion).message.should eq "Validation tests failed"
+    describe Array do
+      it "accepts an array of assertions" do
+        Assert::Exceptions::ValidationError.new([] of Assert::Assertions::Assertion).message.should eq "Validation tests failed"
+      end
+    end
+
+    describe Assert::Assertions::Assertion do
+      it "accepts a single assertion" do
+        Assert::Exceptions::ValidationError.new(Assert::Assertions::NotBlank(String?).new("name", "")).message.should eq "Validation tests failed"
+      end
     end
   end
 
@@ -36,7 +44,7 @@ describe Assert::Exceptions::ValidationError do
         Assert::Assertions::GreaterThanOrEqual(Int32).new("age", -1, 0),
       ])
 
-      error.to_s.should eq "Validation tests failed:  'name' should not be blank, 'age' should be greater than or equal to '0'"
+      error.to_s.should eq "Validation tests failed: 'name' should not be blank, 'age' should be greater than or equal to '0'"
     end
   end
 end
