@@ -11,17 +11,17 @@ jobs:
   check_format:
     runs-on: ubuntu-latest
     container:
-      image: crystallang/crystal
+      image: crystallang/crystal:latest-alpine
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Format
         run: crystal tool format --check
   coding_standards:
     runs-on: ubuntu-latest
     container:
-      image: crystallang/crystal
+      image: crystallang/crystal:latest-alpine
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: shards install
       - name: Ameba
@@ -29,16 +29,16 @@ jobs:
   test_latest:
     runs-on: ubuntu-latest
     container:
-      image: crystallang/crystal
+      image: crystallang/crystal:latest-alpine
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Specs
-        run: crystal spec --warnings all --error-on-warnings
+        run: crystal spec --order random --error-on-warnings
   test_nightly:
     runs-on: ubuntu-latest
     container:
-      image: crystallang/crystal:nightly
+      image: crystallang/crystal:nightly-alpine
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Specs
-        run: crystal spec --warnings all --error-on-warnings
+        run: crystal spec --order random --error-on-warnings

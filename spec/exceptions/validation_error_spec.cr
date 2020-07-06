@@ -33,7 +33,7 @@ describe Assert::Exceptions::ValidationError do
         Assert::Assertions::GreaterThanOrEqual(Int32).new("age", -1, 0),
       ])
 
-      error.to_pretty_json.should eq %({\n  \"code\": 400,\n  \"message\": \"Validation tests failed\",\n  \"errors\": [\n    \"'name' should not be blank\",\n    \"'age' should be greater than or equal to '0'\"\n  ]\n})
+      error.to_pretty_json.should eq %({\n  "code": 400,\n  "message": "Validation tests failed",\n  "errors": [\n    "'name' should not be blank",\n    "'age' should be greater than or equal to '0'"\n  ]\n})
     end
   end
 

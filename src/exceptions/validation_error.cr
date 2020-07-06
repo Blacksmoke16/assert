@@ -50,7 +50,7 @@ class Assert::Exceptions::ValidationError < Exception
   def to_s : String
     String.build do |str|
       str << "Validation tests failed: "
-      @failed_assertions.map(&.message).join(", ", str)
+      @failed_assertions.map(&.message).join(str, ", ")
     end
   end
 end
