@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="assert">
+
+
+<link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="assert">
+  <title>Assert::Assertions::Email::EmailValidationMode - assert HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../../index.html">
+          assert
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="assert/Assert" data-name="assert">
+      <a href="../../../Assert.html">Assert</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="assert/Assert/Assertions" data-name="assert::assertions">
+      <a href="../../../Assert/Assertions.html">Assertions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Assertion" data-name="assert::assertions::assertion">
+      <a href="../../../Assert/Assertions/Assertion.html">Assertion</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Choice" data-name="assert::assertions::choice(propertytype, choicestype)">
+      <a href="../../../Assert/Assertions/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/DivisibleBy" data-name="assert::assertions::divisibleby(propertytype)">
+      <a href="../../../Assert/Assertions/DivisibleBy.html">DivisibleBy</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="assert/Assert/Assertions/Email" data-name="assert::assertions::email(propertytype)">
+      <a href="../../../Assert/Assertions/Email.html">Email</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="assert/Assert/Assertions/Email/EmailValidationMode" data-name="assert::assertions::email::emailvalidationmode">
+      <a href="../../../Assert/Assertions/Email/EmailValidationMode.html">EmailValidationMode</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/EqualTo" data-name="assert::assertions::equalto(propertytype)">
+      <a href="../../../Assert/Assertions/EqualTo.html">EqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThan" data-name="assert::assertions::greaterthan(propertytype)">
+      <a href="../../../Assert/Assertions/GreaterThan.html">GreaterThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThanOrEqual" data-name="assert::assertions::greaterthanorequal(propertytype)">
+      <a href="../../../Assert/Assertions/GreaterThanOrEqual.html">GreaterThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/InRange" data-name="assert::assertions::inrange(propertytype, rangetype)">
+      <a href="../../../Assert/Assertions/InRange.html">InRange</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Ip" data-name="assert::assertions::ip(propertytype)">
+      <a href="../../../Assert/Assertions/Ip.html">Ip</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Ip/IPVersion" data-name="assert::assertions::ip::ipversion">
+      <a href="../../../Assert/Assertions/Ip/IPVersion.html">IPVersion</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsBlank" data-name="assert::assertions::isblank(propertytype)">
+      <a href="../../../Assert/Assertions/IsBlank.html">IsBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsFalse" data-name="assert::assertions::isfalse(propertytype)">
+      <a href="../../../Assert/Assertions/IsFalse.html">IsFalse</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsNil" data-name="assert::assertions::isnil(propertytype)">
+      <a href="../../../Assert/Assertions/IsNil.html">IsNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsTrue" data-name="assert::assertions::istrue(propertytype)">
+      <a href="../../../Assert/Assertions/IsTrue.html">IsTrue</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThan" data-name="assert::assertions::lessthan(propertytype)">
+      <a href="../../../Assert/Assertions/LessThan.html">LessThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThanOrEqual" data-name="assert::assertions::lessthanorequal(propertytype)">
+      <a href="../../../Assert/Assertions/LessThanOrEqual.html">LessThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotBlank" data-name="assert::assertions::notblank(propertytype)">
+      <a href="../../../Assert/Assertions/NotBlank.html">NotBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotEqualTo" data-name="assert::assertions::notequalto(propertytype)">
+      <a href="../../../Assert/Assertions/NotEqualTo.html">NotEqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotNil" data-name="assert::assertions::notnil(propertytype)">
+      <a href="../../../Assert/Assertions/NotNil.html">NotNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/RegexMatch" data-name="assert::assertions::regexmatch(propertytype)">
+      <a href="../../../Assert/Assertions/RegexMatch.html">RegexMatch</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Register" data-name="assert::assertions::register">
+      <a href="../../../Assert/Assertions/Register.html">Register</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Size" data-name="assert::assertions::size(propertytype, rangetype)">
+      <a href="../../../Assert/Assertions/Size.html">Size</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Url" data-name="assert::assertions::url(propertytype)">
+      <a href="../../../Assert/Assertions/Url.html">Url</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Uuid" data-name="assert::assertions::uuid(propertytype)">
+      <a href="../../../Assert/Assertions/Uuid.html">Uuid</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Valid" data-name="assert::assertions::valid(propertytype)">
+      <a href="../../../Assert/Assertions/Valid.html">Valid</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Exceptions" data-name="assert::exceptions">
+      <a href="../../../Assert/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Exceptions/ValidationError" data-name="assert::exceptions::validationerror">
+      <a href="../../../Assert/Exceptions/ValidationError.html">ValidationError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Assert::Assertions::Email::EmailValidationMode
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Which validation pattern to use to validate the email.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertions/email.cr#L48" target="_blank">
+        assertions/email.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Loose">
+        <strong>Loose</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>A simple regular expression. Allows all values with an <code>@</code> symbol in, and a <code>.</code> in the second host part of the email address.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="HTML5">
+        <strong>HTML5</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>This matches the pattern used for the <a href="https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail" target="_blank">HTML5 email input element</a>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Strict">
+        <strong>Strict</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p><span class="flag orange">TODO</span>  Validate against <a href="https://tools.ietf.org/html/rfc5322" target="_blank">RFC 5322</a>.</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#get_pattern:Regex-instance-method" class="signature"><strong>#get_pattern</strong> : Regex</a>
+        
+          <div class="summary"><p>Returns the <code>Regex</code> pattern for <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#html5?-instance-method" class="signature"><strong>#html5?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#loose?-instance-method" class="signature"><strong>#loose?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strict?-instance-method" class="signature"><strong>#strict?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="get_pattern:Regex-instance-method">
+      <div class="signature">
+        
+        def <strong>get_pattern</strong> : Regex
+
+        <a class="method-permalink" href="#get_pattern:Regex-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the <code>Regex</code> pattern for <code>self</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertions/email.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="html5?-instance-method">
+      <div class="signature">
+        
+        def <strong>html5?</strong>
+
+        <a class="method-permalink" href="#html5?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertions/email.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="loose?-instance-method">
+      <div class="signature">
+        
+        def <strong>loose?</strong>
+
+        <a class="method-permalink" href="#loose?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertions/email.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strict?-instance-method">
+      <div class="signature">
+        
+        def <strong>strict?</strong>
+
+        <a class="method-permalink" href="#strict?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertions/email.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

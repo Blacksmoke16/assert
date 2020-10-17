@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="assert">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="assert">
+  <title>Assert - assert HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          assert
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="assert/Assert" data-name="assert">
+      <a href="Assert.html">Assert</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="assert/Assert/Assertions" data-name="assert::assertions">
+      <a href="Assert/Assertions.html">Assertions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Assertion" data-name="assert::assertions::assertion">
+      <a href="Assert/Assertions/Assertion.html">Assertion</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Choice" data-name="assert::assertions::choice(propertytype, choicestype)">
+      <a href="Assert/Assertions/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/DivisibleBy" data-name="assert::assertions::divisibleby(propertytype)">
+      <a href="Assert/Assertions/DivisibleBy.html">DivisibleBy</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Email" data-name="assert::assertions::email(propertytype)">
+      <a href="Assert/Assertions/Email.html">Email</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Email/EmailValidationMode" data-name="assert::assertions::email::emailvalidationmode">
+      <a href="Assert/Assertions/Email/EmailValidationMode.html">EmailValidationMode</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/EqualTo" data-name="assert::assertions::equalto(propertytype)">
+      <a href="Assert/Assertions/EqualTo.html">EqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThan" data-name="assert::assertions::greaterthan(propertytype)">
+      <a href="Assert/Assertions/GreaterThan.html">GreaterThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThanOrEqual" data-name="assert::assertions::greaterthanorequal(propertytype)">
+      <a href="Assert/Assertions/GreaterThanOrEqual.html">GreaterThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/InRange" data-name="assert::assertions::inrange(propertytype, rangetype)">
+      <a href="Assert/Assertions/InRange.html">InRange</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Ip" data-name="assert::assertions::ip(propertytype)">
+      <a href="Assert/Assertions/Ip.html">Ip</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Ip/IPVersion" data-name="assert::assertions::ip::ipversion">
+      <a href="Assert/Assertions/Ip/IPVersion.html">IPVersion</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsBlank" data-name="assert::assertions::isblank(propertytype)">
+      <a href="Assert/Assertions/IsBlank.html">IsBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsFalse" data-name="assert::assertions::isfalse(propertytype)">
+      <a href="Assert/Assertions/IsFalse.html">IsFalse</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsNil" data-name="assert::assertions::isnil(propertytype)">
+      <a href="Assert/Assertions/IsNil.html">IsNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsTrue" data-name="assert::assertions::istrue(propertytype)">
+      <a href="Assert/Assertions/IsTrue.html">IsTrue</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThan" data-name="assert::assertions::lessthan(propertytype)">
+      <a href="Assert/Assertions/LessThan.html">LessThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThanOrEqual" data-name="assert::assertions::lessthanorequal(propertytype)">
+      <a href="Assert/Assertions/LessThanOrEqual.html">LessThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotBlank" data-name="assert::assertions::notblank(propertytype)">
+      <a href="Assert/Assertions/NotBlank.html">NotBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotEqualTo" data-name="assert::assertions::notequalto(propertytype)">
+      <a href="Assert/Assertions/NotEqualTo.html">NotEqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotNil" data-name="assert::assertions::notnil(propertytype)">
+      <a href="Assert/Assertions/NotNil.html">NotNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/RegexMatch" data-name="assert::assertions::regexmatch(propertytype)">
+      <a href="Assert/Assertions/RegexMatch.html">RegexMatch</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Register" data-name="assert::assertions::register">
+      <a href="Assert/Assertions/Register.html">Register</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Size" data-name="assert::assertions::size(propertytype, rangetype)">
+      <a href="Assert/Assertions/Size.html">Size</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Url" data-name="assert::assertions::url(propertytype)">
+      <a href="Assert/Assertions/Url.html">Url</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Uuid" data-name="assert::assertions::uuid(propertytype)">
+      <a href="Assert/Assertions/Uuid.html">Uuid</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Valid" data-name="assert::assertions::valid(propertytype)">
+      <a href="Assert/Assertions/Valid.html">Valid</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Exceptions" data-name="assert::exceptions">
+      <a href="Assert/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Exceptions/ValidationError" data-name="assert::exceptions::validationerror">
+      <a href="Assert/Exceptions/ValidationError.html">ValidationError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Assert
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Annotation based object validation library.</p>
+
+<p>See the <code><a href="Assert/Assertions.html">Assert::Assertions</a></code> namespace for the full assertion list as well as each assertion class for more detailed information/examples.</p>
+
+<p>See <code><a href="Assert/Assertions/Assertion.html">Assert::Assertions::Assertion</a></code> for common/high level assertion usage documentation.</p>
+
+<h3><a id="example-usage" class="anchor" href="#example-usage">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Example Usage</h3>
+
+<p><code><a href="Assert.html">Assert</a></code> supports both object based validations via annotations as well as ad hoc value validations via class methods.</p>
+
+<h4><a id="object-validation" class="anchor" href="#object-validation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Object Validation</h4>
+
+<pre><code><span class="k">require</span> <span class="s">&quot;assert&quot;</span>
+
+<span class="k">class</span> <span class="t">User</span>
+  <span class="k">include</span> <span class="t">Assert</span>
+
+  <span class="k">def</span> <span class="m">initialize</span>(@name : <span class="t">String</span>, @age : <span class="t">Int32</span>?, @email : <span class="t">String</span>, @password : <span class="t">String</span>); <span class="k">end</span>
+
+  <span class="c"># Assert their name is not blank</span>
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">NotBlank</span>]
+  property name : <span class="t">String</span>
+
+  <span class="c"># Asserts that their age is &gt;= 0 AND not nil</span>
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">NotNil</span>]
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">GreaterThanOrEqual</span>(value: <span class="n">0</span>)]
+  property age : <span class="t">Int32</span>?
+
+  <span class="c"># Assert their email is not blank AND is a valid format</span>
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">Email</span>(message: <span class="s">&quot;&#39;%{actual}&#39; is not a proper email&quot;</span>)]
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">NotBlank</span>]
+  property email : <span class="t">String</span>
+
+  <span class="c"># Assert their password is between 7 and 25 characters</span>
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">Size</span>(<span class="t">Range</span>(<span class="t">Int32</span>, <span class="t">Int32</span>), range: <span class="n">7</span>..<span class="n">25</span>)]
+  property password : <span class="t">String</span>
+<span class="k">end</span>
+
+user <span class="o">=</span> <span class="t">User</span>.<span class="k">new</span> <span class="s">&quot;Jim&quot;</span>, <span class="n">19</span>, <span class="s">&quot;test@email.com&quot;</span>, <span class="s">&quot;monkey123&quot;</span>
+
+<span class="c"># #valid? returns `true` if `self` is valid, otherwise `false`</span>
+user.valid? <span class="c"># =&gt; true</span>
+
+user.email <span class="o">=</span> <span class="s">&quot;foobar&quot;</span>
+user.password <span class="o">=</span> <span class="s">&quot;hi&quot;</span>
+
+<span class="c"># #valid? returns `true` if `self` is valid, otherwise `false`</span>
+user.valid? <span class="c"># =&gt; false</span>
+
+<span class="c"># #validate returns an array of assertions that were not valid</span>
+user.validate.empty? <span class="c"># =&gt; false</span>
+
+<span class="k">begin</span>
+  <span class="c"># #validate! raises an exception if `self` is not valid</span>
+  user.validate!
+<span class="k">rescue</span> ex : <span class="t">Assert</span><span class="t">::</span><span class="t">Exceptions</span><span class="t">::</span><span class="t">ValidationError</span>
+  ex.to_s    <span class="c"># =&gt; Validation tests failed:  &#39;foobar&#39; is not a proper email, &#39;password&#39; is too short.  It should have 7 character(s) or more</span>
+  ex.to_json <span class="c"># =&gt; {&quot;code&quot;:400,&quot;message&quot;:&quot;Validation tests failed&quot;,&quot;errors&quot;:[&quot;&#39;foobar&#39; is not a proper email&quot;,&quot;&#39;password&#39; is too short.  It should have 7 character(s) or more&quot;]}</span>
+<span class="k">end</span></code></pre>
+
+<h4><a id="ad-hoc-validation" class="anchor" href="#ad-hoc-validation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Ad Hoc Validation</h4>
+
+<pre><code><span class="c"># Each assertion automatically defines a shortcut class method for ad hoc validations.</span>
+<span class="t">Assert</span>.not_blank <span class="s">&quot;foo&quot;</span> <span class="c"># =&gt; true</span>
+<span class="t">Assert</span>.not_blank <span class="s">&quot;&quot;</span>    <span class="c"># =&gt; false</span>
+
+<span class="k">begin</span>
+  <span class="c"># The bang version will raise if the value is invalid.</span>
+  <span class="t">Assert</span>.not_blank! <span class="s">&quot;   &quot;</span>
+<span class="k">rescue</span> ex
+  ex.to_s <span class="c"># =&gt; Validation tests failed: &#39;actual&#39; should not be blank</span>
+<span class="k">end</span>
+
+<span class="k">begin</span>
+  <span class="c"># Optional arguments can be used just like the annotation versions.</span>
+  <span class="t">Assert</span>.equal_to! <span class="n">15</span>, <span class="n">20</span>, message: <span class="s">&quot;%{actual} does not equal %{value}&quot;</span>
+<span class="k">rescue</span> ex
+  ex.to_s <span class="c"># =&gt; Validation tests failed: 15 does not equal 20</span>
+<span class="k">end</span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L86" target="_blank">
+        assert.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L3" target="_blank">
+        assertion.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#choice(actual:PropertyType,choices:ChoicesType,min_matches:Int32?=nil,max_matches:Int32?=nil,min_message:String?=nil,max_message:String?=nil,multiple_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,ChoicesType-class-method" class="signature"><strong>.choice</strong>(actual : PropertyType, choices : ChoicesType, min_matches : Int32? = <span class="n">nil</span>, max_matches : Int32? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, multiple_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, ChoicesType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Choice.html">Assert::Assertions::Choice</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#choice!(actual:PropertyType,choices:ChoicesType,min_matches:Int32?=nil,max_matches:Int32?=nil,min_message:String?=nil,max_message:String?=nil,multiple_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,ChoicesType-class-method" class="signature"><strong>.choice!</strong>(actual : PropertyType, choices : ChoicesType, min_matches : Int32? = <span class="n">nil</span>, max_matches : Int32? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, multiple_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, ChoicesType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Choice.html">Assert::Assertions::Choice</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#divisible_by(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.divisible_by</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/DivisibleBy.html">Assert::Assertions::DivisibleBy</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#divisible_by!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.divisible_by!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/DivisibleBy.html">Assert::Assertions::DivisibleBy</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#email(actual:Union(String,Nil),mode:EmailValidationMode=EmailValidationMode::Loose,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.email</strong>(actual : Union(String, Nil), mode : EmailValidationMode = <span class="t">EmailValidationMode</span><span class="t">::</span><span class="t">Loose</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Email.html">Assert::Assertions::Email</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#email!(actual:Union(String,Nil),mode:EmailValidationMode=EmailValidationMode::Loose,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.email!</strong>(actual : Union(String, Nil), mode : EmailValidationMode = <span class="t">EmailValidationMode</span><span class="t">::</span><span class="t">Loose</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Email.html">Assert::Assertions::Email</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#equal_to(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.equal_to</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/EqualTo.html">Assert::Assertions::EqualTo</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#equal_to!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.equal_to!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/EqualTo.html">Assert::Assertions::EqualTo</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greater_than(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.greater_than</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/GreaterThan.html">Assert::Assertions::GreaterThan</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greater_than!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.greater_than!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/GreaterThan.html">Assert::Assertions::GreaterThan</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greater_than_or_equal(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.greater_than_or_equal</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/GreaterThanOrEqual.html">Assert::Assertions::GreaterThanOrEqual</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greater_than_or_equal!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.greater_than_or_equal!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/GreaterThanOrEqual.html">Assert::Assertions::GreaterThanOrEqual</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in_range(actual:PropertyType,range:RangeType,not_in_range_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method" class="signature"><strong>.in_range</strong>(actual : PropertyType, range : RangeType, not_in_range_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/InRange.html">Assert::Assertions::InRange</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in_range!(actual:PropertyType,range:RangeType,not_in_range_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method" class="signature"><strong>.in_range!</strong>(actual : PropertyType, range : RangeType, not_in_range_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/InRange.html">Assert::Assertions::InRange</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ip(actual:Union(String,Nil),version:IPVersion=IPVersion::IPV4,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.ip</strong>(actual : Union(String, Nil), version : IPVersion = <span class="t">IPVersion</span><span class="t">::</span><span class="t">IPV4</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Ip.html">Assert::Assertions::Ip</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ip!(actual:Union(String,Nil),version:IPVersion=IPVersion::IPV4,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.ip!</strong>(actual : Union(String, Nil), version : IPVersion = <span class="t">IPVersion</span><span class="t">::</span><span class="t">IPV4</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Ip.html">Assert::Assertions::Ip</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_blank(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_blank</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsBlank.html">Assert::Assertions::IsBlank</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_blank!(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_blank!</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsBlank.html">Assert::Assertions::IsBlank</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_false(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_false</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsFalse.html">Assert::Assertions::IsFalse</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_false!(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_false!</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsFalse.html">Assert::Assertions::IsFalse</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_nil(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_nil</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsNil.html">Assert::Assertions::IsNil</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_nil!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_nil!</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsNil.html">Assert::Assertions::IsNil</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_true(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_true</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsTrue.html">Assert::Assertions::IsTrue</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#is_true!(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.is_true!</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/IsTrue.html">Assert::Assertions::IsTrue</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#less_than(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.less_than</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/LessThan.html">Assert::Assertions::LessThan</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#less_than!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.less_than!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/LessThan.html">Assert::Assertions::LessThan</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#less_than_or_equal(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.less_than_or_equal</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/LessThanOrEqual.html">Assert::Assertions::LessThanOrEqual</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#less_than_or_equal!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.less_than_or_equal!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/LessThanOrEqual.html">Assert::Assertions::LessThanOrEqual</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_blank(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.not_blank</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/NotBlank.html">Assert::Assertions::NotBlank</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_blank!(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.not_blank!</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/NotBlank.html">Assert::Assertions::NotBlank</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_equal_to(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.not_equal_to</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/NotEqualTo.html">Assert::Assertions::NotEqualTo</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_equal_to!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.not_equal_to!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/NotEqualTo.html">Assert::Assertions::NotEqualTo</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_nil(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.not_nil</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/NotNil.html">Assert::Assertions::NotNil</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_nil!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.not_nil!</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/NotNil.html">Assert::Assertions::NotNil</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#regex_match(actual:Union(String,Nil),pattern:Regex,match:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.regex_match</strong>(actual : Union(String, Nil), pattern : Regex, match : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/RegexMatch.html">Assert::Assertions::RegexMatch</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#regex_match!(actual:Union(String,Nil),pattern:Regex,match:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.regex_match!</strong>(actual : Union(String, Nil), pattern : Regex, match : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/RegexMatch.html">Assert::Assertions::RegexMatch</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size(actual:PropertyType,range:RangeType,normalizer:Proc(PropertyType,PropertyType)?=nil,exact_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method" class="signature"><strong>.size</strong>(actual : PropertyType, range : RangeType, normalizer : Proc(PropertyType, PropertyType)? = <span class="n">nil</span>, exact_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Size.html">Assert::Assertions::Size</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size!(actual:PropertyType,range:RangeType,normalizer:Proc(PropertyType,PropertyType)?=nil,exact_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method" class="signature"><strong>.size!</strong>(actual : PropertyType, range : RangeType, normalizer : Proc(PropertyType, PropertyType)? = <span class="n">nil</span>, exact_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Size.html">Assert::Assertions::Size</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#url(actual:Union(String,Nil),protocols:Array(String)=[&quot;http&quot;,&quot;https&quot;]of::String,relative_protocol:Bool=false,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.url</strong>(actual : Union(String, Nil), protocols : Array(String) = [<span class="s">&quot;http&quot;</span>, <span class="s">&quot;https&quot;</span>] <span class="k">of</span> <span class="t">::</span><span class="t">String</span>, relative_protocol : Bool = <span class="n">false</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Url.html">Assert::Assertions::Url</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#url!(actual:Union(String,Nil),protocols:Array(String)=[&quot;http&quot;,&quot;https&quot;]of::String,relative_protocol:Bool=false,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.url!</strong>(actual : Union(String, Nil), protocols : Array(String) = [<span class="s">&quot;http&quot;</span>, <span class="s">&quot;https&quot;</span>] <span class="k">of</span> <span class="t">::</span><span class="t">String</span>, relative_protocol : Bool = <span class="n">false</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Url.html">Assert::Assertions::Url</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uuid(actual:Union(String,Nil),versions:Array(UUID::Version)=[UUID::Version::V1,UUID::Version::V2,UUID::Version::V3,UUID::Version::V4,UUID::Version::V5],variants:Array(UUID::Variant)=[UUID::Variant::RFC4122],strict:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.uuid</strong>(actual : Union(String, Nil), versions : Array(UUID::Version) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V1</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V2</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V3</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V4</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V5</span>], variants : Array(UUID::Variant) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Variant</span><span class="t">::</span><span class="t">RFC4122</span>], strict : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Uuid.html">Assert::Assertions::Uuid</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uuid!(actual:Union(String,Nil),versions:Array(UUID::Version)=[UUID::Version::V1,UUID::Version::V2,UUID::Version::V3,UUID::Version::V4,UUID::Version::V5],variants:Array(UUID::Variant)=[UUID::Variant::RFC4122],strict:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.uuid!</strong>(actual : Union(String, Nil), versions : Array(UUID::Version) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V1</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V2</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V3</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V4</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V5</span>], variants : Array(UUID::Variant) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Variant</span><span class="t">::</span><span class="t">RFC4122</span>], strict : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Uuid.html">Assert::Assertions::Uuid</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.valid</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Valid.html">Assert::Assertions::Valid</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method" class="signature"><strong>.valid!</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType</a>
+        
+          <div class="summary"><p><code><a href="Assert/Assertions/Valid.html">Assert::Assertions::Valid</a></code> assertion shortcut method.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#valid?(groups:Array(String)=Array(String).new):Bool-instance-method" class="signature"><strong>#valid?</strong>(groups : Array(String) = <span class="t">Array</span>(<span class="t">String</span>).<span class="k">new</span>) : Bool</a>
+        
+          <div class="summary"><p>Returns <code>true</code> if <code>self</code> is valid, otherwise <code>false</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid?(*groups:String):Bool-instance-method" class="signature"><strong>#valid?</strong>(*groups : String) : Bool</a>
+        
+          <div class="summary"><p>Returns <code>true</code> if <code>self</code> is valid, otherwise <code>false</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#validate(groups:Array(String)=Array(String).new):Array(Assert::Assertions::Assertion)-instance-method" class="signature"><strong>#validate</strong>(groups : Array(String) = <span class="t">Array</span>(<span class="t">String</span>).<span class="k">new</span>) : Array(Assert::Assertions::Assertion)</a>
+        
+          <div class="summary"><p>Runs the assertions on <code>self</code>, returning the assertions that are not valid.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#validate(*groups:String):Array(Assert::Assertions::Assertion)-instance-method" class="signature"><strong>#validate</strong>(*groups : String) : Array(Assert::Assertions::Assertion)</a>
+        
+          <div class="summary"><p>Runs the assertions on <code>self</code>, returning the assertions that are not valid.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#validate!(groups:Array(String)=Array(String).new):Nil-instance-method" class="signature"><strong>#validate!</strong>(groups : Array(String) = <span class="t">Array</span>(<span class="t">String</span>).<span class="k">new</span>) : Nil</a>
+        
+          <div class="summary"><p>Runs the assertions on <code>self</code>, raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if <code>self</code> is not valid.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#validate!(*groups:String):Nil-instance-method" class="signature"><strong>#validate!</strong>(*groups : String) : Nil</a>
+        
+          <div class="summary"><p>Runs the assertions on <code>self</code>, raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if <code>self</code> is not valid.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="choice(actual:PropertyType,choices:ChoicesType,min_matches:Int32?=nil,max_matches:Int32?=nil,min_message:String?=nil,max_message:String?=nil,multiple_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,ChoicesType-class-method">
+      <div class="signature">
+        
+        def self.<strong>choice</strong>(actual : PropertyType, choices : ChoicesType, min_matches : Int32? = <span class="n">nil</span>, max_matches : Int32? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, multiple_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, ChoicesType
+
+        <a class="method-permalink" href="#choice(actual:PropertyType,choices:ChoicesType,min_matches:Int32?=nil,max_matches:Int32?=nil,min_message:String?=nil,max_message:String?=nil,multiple_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,ChoicesType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Choice.html">Assert::Assertions::Choice</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="choice!(actual:PropertyType,choices:ChoicesType,min_matches:Int32?=nil,max_matches:Int32?=nil,min_message:String?=nil,max_message:String?=nil,multiple_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,ChoicesType-class-method">
+      <div class="signature">
+        
+        def self.<strong>choice!</strong>(actual : PropertyType, choices : ChoicesType, min_matches : Int32? = <span class="n">nil</span>, max_matches : Int32? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, multiple_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, ChoicesType
+
+        <a class="method-permalink" href="#choice!(actual:PropertyType,choices:ChoicesType,min_matches:Int32?=nil,max_matches:Int32?=nil,min_message:String?=nil,max_message:String?=nil,multiple_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,ChoicesType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Choice.html">Assert::Assertions::Choice</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="divisible_by(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>divisible_by</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#divisible_by(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/DivisibleBy.html">Assert::Assertions::DivisibleBy</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="divisible_by!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>divisible_by!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#divisible_by!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/DivisibleBy.html">Assert::Assertions::DivisibleBy</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="email(actual:Union(String,Nil),mode:EmailValidationMode=EmailValidationMode::Loose,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>email</strong>(actual : Union(String, Nil), mode : EmailValidationMode = <span class="t">EmailValidationMode</span><span class="t">::</span><span class="t">Loose</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#email(actual:Union(String,Nil),mode:EmailValidationMode=EmailValidationMode::Loose,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Email.html">Assert::Assertions::Email</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="email!(actual:Union(String,Nil),mode:EmailValidationMode=EmailValidationMode::Loose,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>email!</strong>(actual : Union(String, Nil), mode : EmailValidationMode = <span class="t">EmailValidationMode</span><span class="t">::</span><span class="t">Loose</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#email!(actual:Union(String,Nil),mode:EmailValidationMode=EmailValidationMode::Loose,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Email.html">Assert::Assertions::Email</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="equal_to(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>equal_to</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#equal_to(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/EqualTo.html">Assert::Assertions::EqualTo</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="equal_to!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>equal_to!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#equal_to!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/EqualTo.html">Assert::Assertions::EqualTo</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greater_than(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>greater_than</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#greater_than(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/GreaterThan.html">Assert::Assertions::GreaterThan</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greater_than!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>greater_than!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#greater_than!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/GreaterThan.html">Assert::Assertions::GreaterThan</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greater_than_or_equal(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>greater_than_or_equal</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#greater_than_or_equal(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/GreaterThanOrEqual.html">Assert::Assertions::GreaterThanOrEqual</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greater_than_or_equal!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>greater_than_or_equal!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#greater_than_or_equal!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/GreaterThanOrEqual.html">Assert::Assertions::GreaterThanOrEqual</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in_range(actual:PropertyType,range:RangeType,not_in_range_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">
+      <div class="signature">
+        
+        def self.<strong>in_range</strong>(actual : PropertyType, range : RangeType, not_in_range_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType
+
+        <a class="method-permalink" href="#in_range(actual:PropertyType,range:RangeType,not_in_range_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/InRange.html">Assert::Assertions::InRange</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in_range!(actual:PropertyType,range:RangeType,not_in_range_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">
+      <div class="signature">
+        
+        def self.<strong>in_range!</strong>(actual : PropertyType, range : RangeType, not_in_range_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType
+
+        <a class="method-permalink" href="#in_range!(actual:PropertyType,range:RangeType,not_in_range_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/InRange.html">Assert::Assertions::InRange</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ip(actual:Union(String,Nil),version:IPVersion=IPVersion::IPV4,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>ip</strong>(actual : Union(String, Nil), version : IPVersion = <span class="t">IPVersion</span><span class="t">::</span><span class="t">IPV4</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#ip(actual:Union(String,Nil),version:IPVersion=IPVersion::IPV4,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Ip.html">Assert::Assertions::Ip</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ip!(actual:Union(String,Nil),version:IPVersion=IPVersion::IPV4,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>ip!</strong>(actual : Union(String, Nil), version : IPVersion = <span class="t">IPVersion</span><span class="t">::</span><span class="t">IPV4</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#ip!(actual:Union(String,Nil),version:IPVersion=IPVersion::IPV4,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Ip.html">Assert::Assertions::Ip</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_blank(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_blank</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_blank(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsBlank.html">Assert::Assertions::IsBlank</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_blank!(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_blank!</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_blank!(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsBlank.html">Assert::Assertions::IsBlank</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_false(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_false</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_false(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsFalse.html">Assert::Assertions::IsFalse</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_false!(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_false!</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_false!(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsFalse.html">Assert::Assertions::IsFalse</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_nil(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_nil</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_nil(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsNil.html">Assert::Assertions::IsNil</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_nil!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_nil!</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_nil!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsNil.html">Assert::Assertions::IsNil</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_true(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_true</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_true(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsTrue.html">Assert::Assertions::IsTrue</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="is_true!(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>is_true!</strong>(actual : Union(Bool, Nil), message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#is_true!(actual:Union(Bool,Nil),message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/IsTrue.html">Assert::Assertions::IsTrue</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="less_than(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>less_than</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#less_than(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/LessThan.html">Assert::Assertions::LessThan</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="less_than!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>less_than!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#less_than!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/LessThan.html">Assert::Assertions::LessThan</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="less_than_or_equal(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>less_than_or_equal</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#less_than_or_equal(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/LessThanOrEqual.html">Assert::Assertions::LessThanOrEqual</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="less_than_or_equal!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>less_than_or_equal!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#less_than_or_equal!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/LessThanOrEqual.html">Assert::Assertions::LessThanOrEqual</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_blank(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>not_blank</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#not_blank(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/NotBlank.html">Assert::Assertions::NotBlank</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_blank!(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>not_blank!</strong>(actual : Union(String, Nil), normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#not_blank!(actual:Union(String,Nil),normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/NotBlank.html">Assert::Assertions::NotBlank</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_equal_to(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>not_equal_to</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#not_equal_to(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/NotEqualTo.html">Assert::Assertions::NotEqualTo</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_equal_to!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>not_equal_to!</strong>(actual : PropertyType, value : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#not_equal_to!(actual:PropertyType,value:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/NotEqualTo.html">Assert::Assertions::NotEqualTo</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_nil(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>not_nil</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#not_nil(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/NotNil.html">Assert::Assertions::NotNil</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_nil!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>not_nil!</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#not_nil!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/NotNil.html">Assert::Assertions::NotNil</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="regex_match(actual:Union(String,Nil),pattern:Regex,match:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>regex_match</strong>(actual : Union(String, Nil), pattern : Regex, match : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#regex_match(actual:Union(String,Nil),pattern:Regex,match:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/RegexMatch.html">Assert::Assertions::RegexMatch</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="regex_match!(actual:Union(String,Nil),pattern:Regex,match:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>regex_match!</strong>(actual : Union(String, Nil), pattern : Regex, match : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#regex_match!(actual:Union(String,Nil),pattern:Regex,match:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/RegexMatch.html">Assert::Assertions::RegexMatch</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size(actual:PropertyType,range:RangeType,normalizer:Proc(PropertyType,PropertyType)?=nil,exact_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">
+      <div class="signature">
+        
+        def self.<strong>size</strong>(actual : PropertyType, range : RangeType, normalizer : Proc(PropertyType, PropertyType)? = <span class="n">nil</span>, exact_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType
+
+        <a class="method-permalink" href="#size(actual:PropertyType,range:RangeType,normalizer:Proc(PropertyType,PropertyType)?=nil,exact_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Size.html">Assert::Assertions::Size</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size!(actual:PropertyType,range:RangeType,normalizer:Proc(PropertyType,PropertyType)?=nil,exact_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">
+      <div class="signature">
+        
+        def self.<strong>size!</strong>(actual : PropertyType, range : RangeType, normalizer : Proc(PropertyType, PropertyType)? = <span class="n">nil</span>, exact_message : String? = <span class="n">nil</span>, min_message : String? = <span class="n">nil</span>, max_message : String? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType, RangeType
+
+        <a class="method-permalink" href="#size!(actual:PropertyType,range:RangeType,normalizer:Proc(PropertyType,PropertyType)?=nil,exact_message:String?=nil,min_message:String?=nil,max_message:String?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType,RangeType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Size.html">Assert::Assertions::Size</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="url(actual:Union(String,Nil),protocols:Array(String)=[&quot;http&quot;,&quot;https&quot;]of::String,relative_protocol:Bool=false,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>url</strong>(actual : Union(String, Nil), protocols : Array(String) = [<span class="s">&quot;http&quot;</span>, <span class="s">&quot;https&quot;</span>] <span class="k">of</span> <span class="t">::</span><span class="t">String</span>, relative_protocol : Bool = <span class="n">false</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#url(actual:Union(String,Nil),protocols:Array(String)=[&quot;http&quot;,&quot;https&quot;]of::String,relative_protocol:Bool=false,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Url.html">Assert::Assertions::Url</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="url!(actual:Union(String,Nil),protocols:Array(String)=[&quot;http&quot;,&quot;https&quot;]of::String,relative_protocol:Bool=false,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>url!</strong>(actual : Union(String, Nil), protocols : Array(String) = [<span class="s">&quot;http&quot;</span>, <span class="s">&quot;https&quot;</span>] <span class="k">of</span> <span class="t">::</span><span class="t">String</span>, relative_protocol : Bool = <span class="n">false</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#url!(actual:Union(String,Nil),protocols:Array(String)=[&quot;http&quot;,&quot;https&quot;]of::String,relative_protocol:Bool=false,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Url.html">Assert::Assertions::Url</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uuid(actual:Union(String,Nil),versions:Array(UUID::Version)=[UUID::Version::V1,UUID::Version::V2,UUID::Version::V3,UUID::Version::V4,UUID::Version::V5],variants:Array(UUID::Variant)=[UUID::Variant::RFC4122],strict:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>uuid</strong>(actual : Union(String, Nil), versions : Array(UUID::Version) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V1</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V2</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V3</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V4</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V5</span>], variants : Array(UUID::Variant) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Variant</span><span class="t">::</span><span class="t">RFC4122</span>], strict : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#uuid(actual:Union(String,Nil),versions:Array(UUID::Version)=[UUID::Version::V1,UUID::Version::V2,UUID::Version::V3,UUID::Version::V4,UUID::Version::V5],variants:Array(UUID::Variant)=[UUID::Variant::RFC4122],strict:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Uuid.html">Assert::Assertions::Uuid</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uuid!(actual:Union(String,Nil),versions:Array(UUID::Version)=[UUID::Version::V1,UUID::Version::V2,UUID::Version::V3,UUID::Version::V4,UUID::Version::V5],variants:Array(UUID::Variant)=[UUID::Variant::RFC4122],strict:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>uuid!</strong>(actual : Union(String, Nil), versions : Array(UUID::Version) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V1</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V2</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V3</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V4</span>, <span class="t">UUID</span><span class="t">::</span><span class="t">Version</span><span class="t">::</span><span class="t">V5</span>], variants : Array(UUID::Variant) = [<span class="t">UUID</span><span class="t">::</span><span class="t">Variant</span><span class="t">::</span><span class="t">RFC4122</span>], strict : Bool = <span class="n">true</span>, normalizer : Proc(String, String)? = <span class="n">nil</span>, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#uuid!(actual:Union(String,Nil),versions:Array(UUID::Version)=[UUID::Version::V1,UUID::Version::V2,UUID::Version::V3,UUID::Version::V4,UUID::Version::V5],variants:Array(UUID::Variant)=[UUID::Variant::RFC4122],strict:Bool=true,normalizer:Proc(String,String)?=nil,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Uuid.html">Assert::Assertions::Uuid</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>valid</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#valid(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Valid.html">Assert::Assertions::Valid</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">
+      <div class="signature">
+        
+        def self.<strong>valid!</strong>(actual : PropertyType, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>) : Bool forall PropertyType
+
+        <a class="method-permalink" href="#valid!(actual:PropertyType,message:String?=nil,groups:Array(String)?=nil):BoolforallPropertyType-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p><code><a href="Assert/Assertions/Valid.html">Assert::Assertions::Valid</a></code> assertion shortcut method.</p>
+
+<p>Can be used for ad hoc validations when applying annotations is not possible.
+Raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if the value is not valid.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="valid?(groups:Array(String)=Array(String).new):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>valid?</strong>(groups : Array(String) = <span class="t">Array</span>(<span class="t">String</span>).<span class="k">new</span>) : Bool
+
+        <a class="method-permalink" href="#valid?(groups:Array(String)=Array(String).new):Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if <code>self</code> is valid, otherwise <code>false</code>.
+Optionally only run assertions a part of the provided <em>groups</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid?(*groups:String):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>valid?</strong>(*groups : String) : Bool
+
+        <a class="method-permalink" href="#valid?(*groups:String):Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if <code>self</code> is valid, otherwise <code>false</code>.
+Optionally only run assertions a part of the provided <em>groups</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L127" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="validate(groups:Array(String)=Array(String).new):Array(Assert::Assertions::Assertion)-instance-method">
+      <div class="signature">
+        
+        def <strong>validate</strong>(groups : Array(String) = <span class="t">Array</span>(<span class="t">String</span>).<span class="k">new</span>) : Array(<a href="Assert/Assertions/Assertion.html">Assert::Assertions::Assertion</a>)
+
+        <a class="method-permalink" href="#validate(groups:Array(String)=Array(String).new):Array(Assert::Assertions::Assertion)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Runs the assertions on <code>self</code>, returning the assertions that are not valid.
+Optionally only run assertions a part of the provided <em>groups</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="validate(*groups:String):Array(Assert::Assertions::Assertion)-instance-method">
+      <div class="signature">
+        
+        def <strong>validate</strong>(*groups : String) : Array(<a href="Assert/Assertions/Assertion.html">Assert::Assertions::Assertion</a>)
+
+        <a class="method-permalink" href="#validate(*groups:String):Array(Assert::Assertions::Assertion)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Runs the assertions on <code>self</code>, returning the assertions that are not valid.
+Optionally only run assertions a part of the provided <em>groups</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="validate!(groups:Array(String)=Array(String).new):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>validate!</strong>(groups : Array(String) = <span class="t">Array</span>(<span class="t">String</span>).<span class="k">new</span>) : Nil
+
+        <a class="method-permalink" href="#validate!(groups:Array(String)=Array(String).new):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Runs the assertions on <code>self</code>, raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if <code>self</code> is not valid.</p>
+
+<p>Optionally only run assertions a part of the provided <em>groups</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L172" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="validate!(*groups:String):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>validate!</strong>(*groups : String) : Nil
+
+        <a class="method-permalink" href="#validate!(*groups:String):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Runs the assertions on <code>self</code>, raises an <code><a href="Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></code> if <code>self</code> is not valid.</p>
+
+<p>Optionally only run assertions a part of the provided <em>groups</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assert.cr#L167" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

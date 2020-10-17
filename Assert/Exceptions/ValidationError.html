@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="assert">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="assert">
+  <title>Assert::Exceptions::ValidationError - assert HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          assert
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="assert/Assert" data-name="assert">
+      <a href="../../Assert.html">Assert</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="assert/Assert/Assertions" data-name="assert::assertions">
+      <a href="../../Assert/Assertions.html">Assertions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Assertion" data-name="assert::assertions::assertion">
+      <a href="../../Assert/Assertions/Assertion.html">Assertion</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Choice" data-name="assert::assertions::choice(propertytype, choicestype)">
+      <a href="../../Assert/Assertions/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/DivisibleBy" data-name="assert::assertions::divisibleby(propertytype)">
+      <a href="../../Assert/Assertions/DivisibleBy.html">DivisibleBy</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Email" data-name="assert::assertions::email(propertytype)">
+      <a href="../../Assert/Assertions/Email.html">Email</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Email/EmailValidationMode" data-name="assert::assertions::email::emailvalidationmode">
+      <a href="../../Assert/Assertions/Email/EmailValidationMode.html">EmailValidationMode</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/EqualTo" data-name="assert::assertions::equalto(propertytype)">
+      <a href="../../Assert/Assertions/EqualTo.html">EqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThan" data-name="assert::assertions::greaterthan(propertytype)">
+      <a href="../../Assert/Assertions/GreaterThan.html">GreaterThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThanOrEqual" data-name="assert::assertions::greaterthanorequal(propertytype)">
+      <a href="../../Assert/Assertions/GreaterThanOrEqual.html">GreaterThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/InRange" data-name="assert::assertions::inrange(propertytype, rangetype)">
+      <a href="../../Assert/Assertions/InRange.html">InRange</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Ip" data-name="assert::assertions::ip(propertytype)">
+      <a href="../../Assert/Assertions/Ip.html">Ip</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Ip/IPVersion" data-name="assert::assertions::ip::ipversion">
+      <a href="../../Assert/Assertions/Ip/IPVersion.html">IPVersion</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsBlank" data-name="assert::assertions::isblank(propertytype)">
+      <a href="../../Assert/Assertions/IsBlank.html">IsBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsFalse" data-name="assert::assertions::isfalse(propertytype)">
+      <a href="../../Assert/Assertions/IsFalse.html">IsFalse</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsNil" data-name="assert::assertions::isnil(propertytype)">
+      <a href="../../Assert/Assertions/IsNil.html">IsNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsTrue" data-name="assert::assertions::istrue(propertytype)">
+      <a href="../../Assert/Assertions/IsTrue.html">IsTrue</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThan" data-name="assert::assertions::lessthan(propertytype)">
+      <a href="../../Assert/Assertions/LessThan.html">LessThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThanOrEqual" data-name="assert::assertions::lessthanorequal(propertytype)">
+      <a href="../../Assert/Assertions/LessThanOrEqual.html">LessThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotBlank" data-name="assert::assertions::notblank(propertytype)">
+      <a href="../../Assert/Assertions/NotBlank.html">NotBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotEqualTo" data-name="assert::assertions::notequalto(propertytype)">
+      <a href="../../Assert/Assertions/NotEqualTo.html">NotEqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotNil" data-name="assert::assertions::notnil(propertytype)">
+      <a href="../../Assert/Assertions/NotNil.html">NotNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/RegexMatch" data-name="assert::assertions::regexmatch(propertytype)">
+      <a href="../../Assert/Assertions/RegexMatch.html">RegexMatch</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Register" data-name="assert::assertions::register">
+      <a href="../../Assert/Assertions/Register.html">Register</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Size" data-name="assert::assertions::size(propertytype, rangetype)">
+      <a href="../../Assert/Assertions/Size.html">Size</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Url" data-name="assert::assertions::url(propertytype)">
+      <a href="../../Assert/Assertions/Url.html">Url</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Uuid" data-name="assert::assertions::uuid(propertytype)">
+      <a href="../../Assert/Assertions/Uuid.html">Uuid</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Valid" data-name="assert::assertions::valid(propertytype)">
+      <a href="../../Assert/Assertions/Valid.html">Valid</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="assert/Assert/Exceptions" data-name="assert::exceptions">
+      <a href="../../Assert/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="assert/Assert/Exceptions/ValidationError" data-name="assert::exceptions::validationerror">
+      <a href="../../Assert/Exceptions/ValidationError.html">ValidationError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Assert::Exceptions::ValidationError
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Assert/Exceptions/ValidationError.html">Assert::Exceptions::ValidationError</a></li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Represents a validation error.  It can be raised manually or via <code><a href="../../Assert.html#validate!(groups:Array(String)=Array(String).new):Nil-instance-method">Assert#validate!</a></code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/exceptions/validation_error.cr#L4" target="_blank">
+        exceptions/validation_error.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(failed_assertion:Assert::Assertions::Assertion)-class-method" class="signature"><strong>.new</strong>(failed_assertion : Assert::Assertions::Assertion)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new(failed_assertions:Array(Assert::Assertions::Assertion))-class-method" class="signature"><strong>.new</strong>(failed_assertions : Array(Assert::Assertions::Assertion))</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#to_json(builder:JSON::Builder):Nil-instance-method" class="signature"><strong>#to_json</strong>(builder : JSON::Builder) : Nil</a>
+        
+          <div class="summary"><p>Returns a JSON/pretty JSON object for <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s:String-instance-method" class="signature"><strong>#to_s</strong> : String</a>
+        
+          <div class="summary"><p>Returns failed validations as a string.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(failed_assertion:Assert::Assertions::Assertion)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(failed_assertion : <a href="../../Assert/Assertions/Assertion.html">Assert::Assertions::Assertion</a>)
+
+        <a class="method-permalink" href="#new(failed_assertion:Assert::Assertions::Assertion)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/exceptions/validation_error.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(failed_assertions:Array(Assert::Assertions::Assertion))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(failed_assertions : Array(<a href="../../Assert/Assertions/Assertion.html">Assert::Assertions::Assertion</a>))
+
+        <a class="method-permalink" href="#new(failed_assertions:Array(Assert::Assertions::Assertion))-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/exceptions/validation_error.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="to_json(builder:JSON::Builder):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(builder : JSON::Builder) : Nil
+
+        <a class="method-permalink" href="#to_json(builder:JSON::Builder):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns a JSON/pretty JSON object for <code>self</code>.</p>
+
+<p>Can be overwritten to change the JSON schema.</p>
+
+<pre><code>error <span class="o">=</span> <span class="t">Assert</span><span class="t">::</span><span class="t">Exceptions</span><span class="t">::</span><span class="t">ValidationError</span>.<span class="k">new</span>([
+  <span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">NotBlank</span>(<span class="t">String</span>?).<span class="k">new</span>(<span class="s">&quot;name&quot;</span>, <span class="s">&quot;&quot;</span>),
+  <span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">GreaterThanOrEqual</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="s">&quot;age&quot;</span>, <span class="n">-1</span>, <span class="n">0</span>),
+])
+
+error.to_pretty_json <span class="c"># =&gt;</span>
+{
+  <span class="s">&quot;code&quot;</span>:    <span class="n">400</span>,
+  <span class="s">&quot;message&quot;</span>: <span class="s">&quot;Validation tests failed&quot;</span>,
+  <span class="s">&quot;errors&quot;</span>:  [
+    <span class="s">&quot;&#39;name&#39; should not be blank&quot;</span>,
+    <span class="s">&quot;&#39;age&#39; should be greater than or equal to &#39;0&#39;&quot;</span>,
+  ],
+}</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/exceptions/validation_error.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s:String-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong> : String
+
+        <a class="method-permalink" href="#to_s:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns failed validations as a string.</p>
+
+<pre><code>error <span class="o">=</span> <span class="t">Assert</span><span class="t">::</span><span class="t">Exceptions</span><span class="t">::</span><span class="t">ValidationError</span>.<span class="k">new</span>([
+  <span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">NotBlank</span>(<span class="t">String</span>?).<span class="k">new</span>(<span class="s">&quot;name&quot;</span>, <span class="s">&quot;&quot;</span>),
+  <span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">GreaterThanOrEqual</span>(<span class="t">Int32</span>).<span class="k">new</span>(<span class="s">&quot;age&quot;</span>, <span class="n">-1</span>, <span class="n">0</span>),
+])
+
+error.to_s <span class="c"># =&gt; &quot;Validation tests failed: &#39;name&#39; should not be blank, &#39;age&#39; should be greater than or equal to &#39;0&#39;&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/exceptions/validation_error.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

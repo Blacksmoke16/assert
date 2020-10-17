@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="assert">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="assert">
+  <title>Assert::Assertions::Assertion - assert HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          assert
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="assert/Assert" data-name="assert">
+      <a href="../../Assert.html">Assert</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="assert/Assert/Assertions" data-name="assert::assertions">
+      <a href="../../Assert/Assertions.html">Assertions</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="assert/Assert/Assertions/Assertion" data-name="assert::assertions::assertion">
+      <a href="../../Assert/Assertions/Assertion.html">Assertion</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Choice" data-name="assert::assertions::choice(propertytype, choicestype)">
+      <a href="../../Assert/Assertions/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/DivisibleBy" data-name="assert::assertions::divisibleby(propertytype)">
+      <a href="../../Assert/Assertions/DivisibleBy.html">DivisibleBy</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Email" data-name="assert::assertions::email(propertytype)">
+      <a href="../../Assert/Assertions/Email.html">Email</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Email/EmailValidationMode" data-name="assert::assertions::email::emailvalidationmode">
+      <a href="../../Assert/Assertions/Email/EmailValidationMode.html">EmailValidationMode</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/EqualTo" data-name="assert::assertions::equalto(propertytype)">
+      <a href="../../Assert/Assertions/EqualTo.html">EqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThan" data-name="assert::assertions::greaterthan(propertytype)">
+      <a href="../../Assert/Assertions/GreaterThan.html">GreaterThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/GreaterThanOrEqual" data-name="assert::assertions::greaterthanorequal(propertytype)">
+      <a href="../../Assert/Assertions/GreaterThanOrEqual.html">GreaterThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/InRange" data-name="assert::assertions::inrange(propertytype, rangetype)">
+      <a href="../../Assert/Assertions/InRange.html">InRange</a>
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Assertions/Ip" data-name="assert::assertions::ip(propertytype)">
+      <a href="../../Assert/Assertions/Ip.html">Ip</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Ip/IPVersion" data-name="assert::assertions::ip::ipversion">
+      <a href="../../Assert/Assertions/Ip/IPVersion.html">IPVersion</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsBlank" data-name="assert::assertions::isblank(propertytype)">
+      <a href="../../Assert/Assertions/IsBlank.html">IsBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsFalse" data-name="assert::assertions::isfalse(propertytype)">
+      <a href="../../Assert/Assertions/IsFalse.html">IsFalse</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsNil" data-name="assert::assertions::isnil(propertytype)">
+      <a href="../../Assert/Assertions/IsNil.html">IsNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/IsTrue" data-name="assert::assertions::istrue(propertytype)">
+      <a href="../../Assert/Assertions/IsTrue.html">IsTrue</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThan" data-name="assert::assertions::lessthan(propertytype)">
+      <a href="../../Assert/Assertions/LessThan.html">LessThan</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/LessThanOrEqual" data-name="assert::assertions::lessthanorequal(propertytype)">
+      <a href="../../Assert/Assertions/LessThanOrEqual.html">LessThanOrEqual</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotBlank" data-name="assert::assertions::notblank(propertytype)">
+      <a href="../../Assert/Assertions/NotBlank.html">NotBlank</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotEqualTo" data-name="assert::assertions::notequalto(propertytype)">
+      <a href="../../Assert/Assertions/NotEqualTo.html">NotEqualTo</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/NotNil" data-name="assert::assertions::notnil(propertytype)">
+      <a href="../../Assert/Assertions/NotNil.html">NotNil</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/RegexMatch" data-name="assert::assertions::regexmatch(propertytype)">
+      <a href="../../Assert/Assertions/RegexMatch.html">RegexMatch</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Register" data-name="assert::assertions::register">
+      <a href="../../Assert/Assertions/Register.html">Register</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Size" data-name="assert::assertions::size(propertytype, rangetype)">
+      <a href="../../Assert/Assertions/Size.html">Size</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Url" data-name="assert::assertions::url(propertytype)">
+      <a href="../../Assert/Assertions/Url.html">Url</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Uuid" data-name="assert::assertions::uuid(propertytype)">
+      <a href="../../Assert/Assertions/Uuid.html">Uuid</a>
+      
+    </li>
+  
+  <li class=" " data-id="assert/Assert/Assertions/Valid" data-name="assert::assertions::valid(propertytype)">
+      <a href="../../Assert/Assertions/Valid.html">Valid</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="assert/Assert/Exceptions" data-name="assert::exceptions">
+      <a href="../../Assert/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="assert/Assert/Exceptions/ValidationError" data-name="assert::exceptions::validationerror">
+      <a href="../../Assert/Exceptions/ValidationError.html">ValidationError</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">abstract class</span> Assert::Assertions::Assertion
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Assert/Assertions/Assertion.html">Assert::Assertions::Assertion</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Base class of all assertions.</p>
+
+<p>An assertion consists of:</p>
+
+<ol><li>An annotation applied to a property.</li><li>A class that implements the validation logic for that annotation.</li></ol>
+
+<p>Each assertion defines an <em>actual</em> ivar that represents the current value
+of the property.  The type of <em>actual</em> is used to determine what types of properties
+the annotation can be applied to.  I.e. if the type is <code>String</code>, that assertion
+can only be applied to <code>String</code> properties.  The generic <code>P</code> can also be used, which
+would allow it to be added to any type of property.</p>
+
+<p>All assertions must inherit from <code><a href="../../Assert/Assertions/Assertion.html">Assertion</a></code> as well as apply the <code><a href="../../Assert/Assertions/Register.html">Register</a></code> annotation, and give the name of the annotation; <code>Assert::SomeAssertion</code> for example.</p>
+
+<p>Assertions can define additional ivars within the initializer.  The name of each ivar
+is also used as the name to use on the annotation.</p>
+
+<p>Ivars with a default value are considered optional.  The default value
+will be used if that value is not specified within the annotation.</p>
+
+<p><code><a href="../../Assert/Assertions/Assertion.html#initializer(**ivars)-macro">Assertion.initializer</a></code> can be used as an easier way to define the <code>initialize</code> method.</p>
+
+<h3><a id="custom-assertions" class="anchor" href="#custom-assertions">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Custom Assertions</h3>
+
+<p>Custom assertions can easily be defined by inheriting from <code><a href="../../Assert/Assertions/Assertion.html">Assertion</a></code>, applying the <code><a href="../../Assert/Assertions/Register.html">Register</a></code> annotation, and setting the name of the annotation to read.</p>
+
+<pre><code>@[<span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">Register</span>(<span class="k">annotation</span>: <span class="t">Assert</span><span class="t">::</span><span class="t">MyCustom</span>)]
+<span class="k">class</span> <span class="t">MyCustom</span>(<span class="t">PropertyType</span>) <span class="o">&lt;</span> <span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">Assertion</span>
+  <span class="k">def</span> <span class="m">initialize</span>(
+    @actual : <span class="t">String</span>?,            <span class="c"># This assertion can only be used on `String?` or `String` properties. Is set automatically.</span>
+    @some_value : <span class="t">Int32</span>,          <span class="c"># A required argument, must be supplied within the annotation or a compile time error will be raised.</span>
+    property_name : <span class="t">String</span>,       <span class="c"># The property this assertion was applied to.  Is set automatically.</span>
+    @some_bool : <span class="t">Bool</span> <span class="o">=</span> <span class="n">true</span>,     <span class="c"># An optional argument.  The value will be `true` if *some_bool* is not specified within the annotation.</span>
+    message : <span class="t">String</span>? <span class="o">=</span> <span class="n">nil</span>,      <span class="c"># Optionally override the message on a per property basis.</span>
+    groups : <span class="t">Array</span>(<span class="t">String</span>)? <span class="o">=</span> <span class="n">nil</span> <span class="c"># Optionally override the groups on a per property basis.</span>
+  )
+    <span class="k">super</span> property_name, message, groups <span class="c"># Be sure to call `super property_name, message, groups` to set the property_name/message/groups.</span>
+  <span class="k">end</span>
+
+  <span class="c"># The initialize method could also have been written using the `Assertion.initializer` macro.</span>
+  initializer(
+    actual: <span class="t">String</span>?,
+    some_value: <span class="t">Int32</span>,
+    some_bool: <span class="s">&quot;Bool = true&quot;</span>
+  )
+
+  <span class="c"># :inherit:</span>
+  <span class="k">def</span> <span class="m">default_message_template</span> : <span class="t">String</span>
+    <span class="c"># The default message template to use if one is not supplied.</span>
+    <span class="c"># Instance variables on `self` can be referenced/formatted within the template by using named sprintf named arguments. E.x. `%{some_bool}`, or `%&lt;some_number&gt;0.4d`, etc.</span>
+    <span class="s">&quot;&#39;%{property_name}&#39; is not valid.&quot;</span>
+  <span class="k">end</span>
+
+  <span class="c"># :inherit:</span>
+  <span class="k">def</span> <span class="m">valid?</span> : <span class="t">Bool</span>
+    <span class="c"># Define validation logic</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+
+<p><span class="flag purple">NOTE</span>  Every assertion must have a generic <code>PropertyType</code> as its first generic type variable; even if the assertion is not using it.</p>
+
+<p>This custom assertion is now ready to use.  Be sure to <code>include <a href="../../Assert.html">Assert</a></code>.</p>
+
+<pre><code><span class="c"># Since *some_value* does not have a default value, it is required.</span>
+@[<span class="t">Assert</span><span class="t">::</span><span class="t">MyCustom</span>(some_value: <span class="n">123</span>)]
+property name : <span class="t">String</span>
+
+<span class="c"># Override the default value of *some_bool*.</span>
+@[<span class="t">Assert</span><span class="t">::</span><span class="t">MyCustom</span>(some_value: <span class="n">456</span>, some_bool: <span class="n">false</span>)]
+property name : <span class="t">String</span></code></pre>
+
+<h3><a id="validation-groups" class="anchor" href="#validation-groups">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Validation Groups</h3>
+
+<p>By default, <code><a href="../../Assert.html">Assert</a></code> bases the validity of an object based on <em>all</em> the assertions defined on it.  However, each assertion has an optional
+<code><a href="../../Assert/Assertions/Assertion.html#groups:Array(String)-instance-method">#groups</a></code> property that can be used to assign that assertion to a given group(s). Assertions without explicit groups are automatically assigned
+to the "default" group.  This allows assertions without a group to be ran in conjunction with those in an explicit group.
+Validation groups can be used to run a subset of assertions, and base the validity of the object on that subset.</p>
+
+<pre><code><span class="k">class</span> <span class="t">Groups</span>
+  <span class="k">include</span> <span class="t">Assert</span>
+
+  <span class="k">def</span> <span class="m">initialize</span>(@group_1 : <span class="t">Int32</span>, @group_2 : <span class="t">Int32</span>, @default_group : <span class="t">Int32</span>); <span class="k">end</span>
+
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">EqualTo</span>(value: <span class="n">100</span>, groups: [<span class="s">&quot;group1&quot;</span>])]
+  property group_1 : <span class="t">Int32</span>
+
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">EqualTo</span>(value: <span class="n">200</span>, groups: [<span class="s">&quot;group2&quot;</span>])]
+  property group_2 : <span class="t">Int32</span>
+
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">EqualTo</span>(value: <span class="n">300</span>)]
+  property default_group : <span class="t">Int32</span>
+<span class="k">end</span>
+
+<span class="t">Groups</span>.<span class="k">new</span>(<span class="n">100</span>, <span class="n">200</span>, <span class="n">300</span>).valid?                      <span class="c"># =&gt; true</span>
+<span class="t">Groups</span>.<span class="k">new</span>(<span class="n">100</span>, <span class="n">100</span>, <span class="n">100</span>).valid?                      <span class="c"># =&gt; false</span>
+<span class="t">Groups</span>.<span class="k">new</span>(<span class="n">100</span>, <span class="n">100</span>, <span class="n">100</span>).valid?([<span class="s">&quot;group1&quot;</span>])          <span class="c"># =&gt; true</span>
+<span class="t">Groups</span>.<span class="k">new</span>(<span class="n">200</span>, <span class="n">100</span>, <span class="n">300</span>).valid?([<span class="s">&quot;default&quot;</span>])         <span class="c"># =&gt; true</span>
+<span class="t">Groups</span>.<span class="k">new</span>(<span class="n">100</span>, <span class="n">200</span>, <span class="n">200</span>).valid?(<span class="s">&quot;group1&quot;</span>, <span class="s">&quot;default&quot;</span>) <span class="c"># =&gt; false</span></code></pre>
+
+<h3><a id="generics" class="anchor" href="#generics">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Generics</h3>
+
+<p>An assertion can utilize additional generic type variables, other than the required <code>PropertyType</code>.  These would then be provided as positional arguments on the assertion annotation.</p>
+
+<pre><code>@[<span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">Register</span>(<span class="k">annotation</span>: <span class="t">Assert</span><span class="t">::</span><span class="t">Exists</span>)]
+<span class="c"># A custom assertion that validates if a record exists with the given *id*.</span>
+<span class="c">#</span>
+<span class="c"># For example, an ORM model where `.exists?` checks if a record exists with the given PK.</span>
+<span class="c"># I.e. `SELECT exists(select 1 from &quot;users&quot; WHERE id = 123);`</span>
+<span class="k">class</span> <span class="t">Exists</span>(<span class="t">PropertyType</span>, <span class="t">Model</span>) <span class="o">&lt;</span> <span class="t">Assert</span><span class="t">::</span><span class="t">Assertions</span><span class="t">::</span><span class="t">Assertion</span>
+  initializer(
+    actual: <span class="t">PropertyType</span>
+  )
+
+  <span class="c"># :inherit:</span>
+  <span class="k">def</span> <span class="m">default_message_template</span> : <span class="t">String</span>
+    <span class="s">&quot;&#39;%{actual}&#39; is not a valid %{property_name}.&quot;</span>
+  <span class="k">end</span>
+
+  <span class="c"># :inherit:</span>
+  <span class="k">def</span> <span class="m">valid?</span> : <span class="t">Bool</span>
+    <span class="c"># Can use any class method defined on `M`</span>
+    <span class="t">Model</span>.exists? @actual
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+
+<pre><code><span class="k">class</span> <span class="t">Post</span> <span class="o">&lt;</span> <span class="t">SomeORM</span><span class="t">::</span><span class="t">Model</span>
+  <span class="k">include</span> <span class="t">Assert</span>
+
+  <span class="k">def</span> <span class="m">initialize</span>; <span class="k">end</span>
+
+  @[<span class="t">Assert</span><span class="t">::</span><span class="t">Exists</span>(<span class="t">User</span>)]
+  property author_id : <span class="t">Int64</span> <span class="o">=</span> <span class="n">17</span>
+<span class="k">end</span></code></pre>
+
+<p>This would assert that there is a <code>User</code> record with a primary key value of <code>17</code>.</p>
+
+<p>Of course you can also define named arguments on the annotation if you wanted to, for example, customize the error message on a per annotation basis.</p>
+
+<pre><code>@[<span class="t">Assert</span><span class="t">::</span><span class="t">Exists</span>(<span class="t">User</span>, message: <span class="s">&quot;No user exists with the provided ID&quot;</span>)]
+property author_id : <span class="t">Int64</span></code></pre>
+
+<h3><a id="extending" class="anchor" href="#extending">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Extending</h3>
+
+<p>By default, objects must be validated manually; that is using <code><a href="../../Assert.html#valid?(groups:Array(String)=Array(String).new):Bool-instance-method">Assert#valid?</a></code>, <code><a href="../../Assert.html#validate(groups:Array(String)=Array(String).new):Array(Assert::Assertions::Assertion)-instance-method">Assert#validate</a></code>, or <code><a href="../../Assert.html#validate!(groups:Array(String)=Array(String).new):Nil-instance-method">Assert#validate!</a></code> on your own.  This is left up to the user to allow them to
+control how exactly validation of their objects should work.</p>
+
+<p><code><a href="../../Assert.html">Assert</a></code> is easy to integrate into existing frameworks/applications.  For example, it could be included in a web framework to automatically run
+assertions on deserialization, by adding some logic to a <code>after_initialize</code> method if using <code>JSON::Serializable</code>.  It could also be added into an ORM to check if the object is valid before saving.
+You could also add logic to an initializer so that it would validate the object on initialization.</p>
+
+<p><span class="flag purple">NOTE</span>  <code>nil</code> is considered to be a valid value if the property is nilable.  Either use a non-nilable type, or a <code><a href="../../Assert/Assertions/NotNil.html">NotNil</a></code> assertion.</p>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Choice.html">Assert::Assertions::Choice(PropertyType, ChoicesType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/DivisibleBy.html">Assert::Assertions::DivisibleBy(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Email.html">Assert::Assertions::Email(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/EqualTo.html">Assert::Assertions::EqualTo(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/GreaterThan.html">Assert::Assertions::GreaterThan(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/GreaterThanOrEqual.html">Assert::Assertions::GreaterThanOrEqual(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/InRange.html">Assert::Assertions::InRange(PropertyType, RangeType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Ip.html">Assert::Assertions::Ip(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/IsBlank.html">Assert::Assertions::IsBlank(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/IsFalse.html">Assert::Assertions::IsFalse(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/IsNil.html">Assert::Assertions::IsNil(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/IsTrue.html">Assert::Assertions::IsTrue(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/LessThan.html">Assert::Assertions::LessThan(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/LessThanOrEqual.html">Assert::Assertions::LessThanOrEqual(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/NotBlank.html">Assert::Assertions::NotBlank(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/NotEqualTo.html">Assert::Assertions::NotEqualTo(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/NotNil.html">Assert::Assertions::NotNil(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/RegexMatch.html">Assert::Assertions::RegexMatch(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Size.html">Assert::Assertions::Size(PropertyType, RangeType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Url.html">Assert::Assertions::Url(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Uuid.html">Assert::Assertions::Uuid(PropertyType)</a></li>
+    
+      <li class="other-type"><a href="../../Assert/Assertions/Valid.html">Assert::Assertions::Valid(PropertyType)</a></li>
+    
+  </ul>
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L170" target="_blank">
+        assertion.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(property_name:String,message:String?=nil,groups:Array(String)?=nil)-class-method" class="signature"><strong>.new</strong>(property_name : String, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Sets the <em>property_name</em>, and <em>message</em>/<em>groups</em> if none were provided.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#default_message_template:String-instance-method" class="signature"><strong>#default_message_template</strong> : String</a>
+        
+          <div class="summary"><p>Returns the default <code><a href="../../Assert/Assertions/Assertion.html#message_template:String-instance-method">#message_template</a></code> to use if no <em>message</em> is provided.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#groups:Array(String)-instance-method" class="signature"><strong>#groups</strong> : Array(String)</a>
+        
+          <div class="summary"><p>The validation groups <code>self</code> is a part of.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#message:String-instance-method" class="signature"><strong>#message</strong> : String</a>
+        
+          <div class="summary"><p>The message to display if <code>self</code> is not valid.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#message_template:String-instance-method" class="signature"><strong>#message_template</strong> : String</a>
+        
+          <div class="summary"><p>The raw template string that is used to build <code><a href="../../Assert/Assertions/Assertion.html#message:String-instance-method">#message</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#property_name:String-instance-method" class="signature"><strong>#property_name</strong> : String</a>
+        
+          <div class="summary"><p>The name of the property <code>self</code> was applied to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid?:Bool-instance-method" class="signature"><strong>#valid?</strong> : Bool</a>
+        
+          <div class="summary"><p>Returns <code>true</code> if a property satisfies <code>self</code>, otherwise <code>false</code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="macro-summary" class="anchor" href="#macro-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#initializer(**ivars)-macro" class="signature"><strong>initializer</strong>(**ivars)</a>
+        
+          <div class="summary"><p>Builds <code>initialize</code> with the provided <em>ivars</em>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(property_name:String,message:String?=nil,groups:Array(String)?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(property_name : String, message : String? = <span class="n">nil</span>, groups : Array(String)? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new(property_name:String,message:String?=nil,groups:Array(String)?=nil)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the <em>property_name</em>, and <em>message</em>/<em>groups</em> if none were provided.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L183" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="default_message_template:String-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>default_message_template</strong> : String
+
+        <a class="method-permalink" href="#default_message_template:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the default <code><a href="../../Assert/Assertions/Assertion.html#message_template:String-instance-method">#message_template</a></code> to use if no <em>message</em> is provided.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L189" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="groups:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>groups</strong> : Array(String)
+
+        <a class="method-permalink" href="#groups:Array(String)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The validation groups <code>self</code> is a part of.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L174" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="message:String-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>message</strong> : String
+
+        <a class="method-permalink" href="#message:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The message to display if <code>self</code> is not valid.</p>
+
+<p><span class="flag purple">NOTE</span>  This method is defined automatically, and is just present for documentation purposes.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L194" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="message_template:String-instance-method">
+      <div class="signature">
+        
+        def <strong>message_template</strong> : String
+
+        <a class="method-permalink" href="#message_template:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The raw template string that is used to build <code><a href="../../Assert/Assertions/Assertion.html#message:String-instance-method">#message</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="property_name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>property_name</strong> : String
+
+        <a class="method-permalink" href="#property_name:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The name of the property <code>self</code> was applied to.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L180" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid?:Bool-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>valid?</strong> : Bool
+
+        <a class="method-permalink" href="#valid?:Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if a property satisfies <code>self</code>, otherwise <code>false</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L197" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="macro-detail" class="anchor" href="#macro-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Detail
+  </h2>
+  
+    <div class="entry-detail" id="initializer(**ivars)-macro">
+      <div class="signature">
+        
+        macro <strong>initializer</strong>(**ivars)
+
+        <a class="method-permalink" href="#initializer(**ivars)-macro">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Builds <code>initialize</code> with the provided <em>ivars</em>.</p>
+
+<p>Handles setting the required parent arguments and calling super.</p>
+
+<pre><code>initializer(actual: <span class="t">String</span>?, some_bool: <span class="s">&quot;Bool = false&quot;</span>)
+<span class="c"># def initialize(</span>
+<span class="c">#   property_name : String,</span>
+<span class="c">#   @actual : ::Union(String, ::Nil),</span>
+<span class="c">#   @some_bool : Bool = false,</span>
+<span class="c">#   message : String? = nil,</span>
+<span class="c">#   groups : Array(String)? = nil</span>
+<span class="c"># )</span>
+<span class="c">#   super property_name, message, groups</span>
+<span class="c"># end</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Blacksmoke16/assert/blob/d6392af2409fba5146f3193c703dc3a8086aa937/src/assertion.cr#L214" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>
