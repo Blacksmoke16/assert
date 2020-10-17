@@ -1,3 +1,5 @@
+# Deprecated in favor of Athena's [Validator](https://github.com/athena-framework/validator) component.
+
 # Assert
 [![Latest release](https://img.shields.io/github/release/Blacksmoke16/assert.svg?style=flat-square)](https://github.com/Blacksmoke16/assert/releases)
 
